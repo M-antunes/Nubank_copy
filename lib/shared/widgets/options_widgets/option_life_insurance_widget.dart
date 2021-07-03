@@ -1,28 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
+import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 
-class OptionLoanWidget extends StatelessWidget {
+class OptionLifeInsuranceWidget extends StatelessWidget {
   final IconData icon;
   final String descriptionText;
-  final String smallText;
-  final TextStyle? descriptionTextStyle;
-  final TextStyle? smallTextStyle;
-  final String? limit;
-  final TextStyle? limitStyle;
+  final String bigText;
   final String buttonText;
-  final TextStyle buttonTextColor;
 
-  const OptionLoanWidget({
+  const OptionLifeInsuranceWidget({
     Key? key,
     required this.icon,
     required this.descriptionText,
-    required this.smallText,
-    this.descriptionTextStyle,
-    this.smallTextStyle,
-    this.limit = "",
-    this.limitStyle,
+    this.bigText = "",
     required this.buttonText,
-    required this.buttonTextColor,
   }) : super(key: key);
 
   @override
@@ -34,9 +25,9 @@ class OptionLoanWidget extends StatelessWidget {
           Radius.circular(4),
         ),
       ),
-      margin: EdgeInsets.only(top: 23, left: 23, right: 23),
+      margin: const EdgeInsets.only(top: 23, left: 23, right: 23),
       child: Padding(
-        padding: EdgeInsets.all(12.0),
+        padding: const EdgeInsets.all(12.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -44,28 +35,24 @@ class OptionLoanWidget extends StatelessWidget {
             Row(
               children: [
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: Icon(icon),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    descriptionText,
-                    style: descriptionTextStyle,
+                    bigText,
+                    style: TextStyles.insuranceText,
                   ),
                 ),
               ],
             ),
             Padding(
-              padding: EdgeInsets.all(5.0),
+              padding: const EdgeInsets.all(5.0),
               child: Text(
-                smallText,
-                style: smallTextStyle,
+                descriptionText,
+                style: TextStyles.desriptionText,
               ),
-            ),
-            Text(
-              "$limit",
-              style: limitStyle,
             ),
             Container(
               child: OutlinedButton(
@@ -78,7 +65,7 @@ class OptionLoanWidget extends StatelessWidget {
                 ),
                 child: Text(
                   buttonText,
-                  style: buttonTextColor,
+                  style: TextStyles.isuranceButton,
                 ),
               ),
             ),

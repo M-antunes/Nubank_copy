@@ -1,32 +1,20 @@
 import 'package:flutter/material.dart';
+
 import 'package:nubank_copy/shared/themes/app_colors.dart';
+import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 
-class OptionCardWidget extends StatelessWidget {
+class OptionGooglePayWidget extends StatelessWidget {
   final IconData icon;
-  final String descriptionText;
   final String smallText;
-  final String? bigText;
-  final TextStyle? descriptionTextStyle;
-  final TextStyle? smallTextStyle;
-  final TextStyle? bigTextStyle;
-  final String? limit;
-  final TextStyle? limitStyle;
-  final String? smallText2;
-  final TextStyle? smallText2Style;
+  final String smallText2;
+  final String buttonText;
 
-  const OptionCardWidget({
+  const OptionGooglePayWidget({
     Key? key,
     required this.icon,
-    required this.descriptionText,
-    this.bigText = "",
     required this.smallText,
-    this.descriptionTextStyle,
-    this.bigTextStyle,
-    this.limit = "",
-    this.limitStyle,
-    this.smallTextStyle,
-    this.smallText2 = "",
-    this.smallText2Style,
+    required this.smallText2,
+    required this.buttonText,
   }) : super(key: key);
 
   @override
@@ -54,8 +42,8 @@ class OptionCardWidget extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    descriptionText,
-                    style: descriptionTextStyle,
+                    smallText,
+                    style: TextStyles.creditBillText,
                   ),
                 ),
               ],
@@ -63,24 +51,24 @@ class OptionCardWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(5.0),
               child: Text(
-                smallText,
-                style: smallTextStyle,
+                smallText2,
+                style: TextStyles.creditBillText,
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(5.0),
-              child: Text(
-                "$bigText",
-                style: bigTextStyle,
+            Container(
+              child: OutlinedButton(
+                onPressed: () {},
+                style: ButtonStyle(
+                  shape: MaterialStateProperty.all(
+                    RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0)),
+                  ),
+                ),
+                child: Text(
+                  buttonText,
+                  style: TextStyles.isuranceButton,
+                ),
               ),
-            ),
-            Text(
-              smallText2!,
-              style: smallText2Style,
-            ),
-            Text(
-              "$limit",
-              style: limitStyle,
             ),
           ],
         ),

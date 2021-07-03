@@ -69,4 +69,14 @@ class TextStyles {
     fontWeight: FontWeight.w300,
     color: AppColors.bottomIcon,
   );
+  static final settingsText = GoogleFonts.roboto(
+    fontSize: 16,
+    fontWeight: FontWeight.w300,
+    color: AppColors.bottomIcon,
+  );
+  static final settingOptions = GoogleFonts.roboto(
+    fontSize: 18,
+    fontWeight: FontWeight.w400,
+    color: AppColors.bottomIcon,
+  );
 }

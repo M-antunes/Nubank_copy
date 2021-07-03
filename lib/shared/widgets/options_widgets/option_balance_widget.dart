@@ -1,24 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
+import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 
-class OptionLifeInsuranceWidget extends StatelessWidget {
+class OptionBalanceWidget extends StatelessWidget {
   final IconData icon;
   final String descriptionText;
+  final String smallText;
   final String bigText;
-  final TextStyle? descriptionTextStyle;
-  final TextStyle? bigTextStyle;
-  final String buttonText;
-  final TextStyle buttonTextColor;
 
-  const OptionLifeInsuranceWidget({
+  const OptionBalanceWidget({
     Key? key,
     required this.icon,
     required this.descriptionText,
+    required this.smallText,
     this.bigText = "",
-    this.descriptionTextStyle,
-    this.bigTextStyle,
-    required this.buttonText,
-    required this.buttonTextColor,
   }) : super(key: key);
 
   @override
@@ -46,8 +41,8 @@ class OptionLifeInsuranceWidget extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    bigText,
-                    style: bigTextStyle,
+                    descriptionText,
+                    style: TextStyles.creditBillText,
                   ),
                 ),
               ],
@@ -55,23 +50,15 @@ class OptionLifeInsuranceWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(5.0),
               child: Text(
-                descriptionText,
-                style: descriptionTextStyle,
+                smallText,
+                style: TextStyles.desriptionText,
               ),
             ),
-            Container(
-              child: OutlinedButton(
-                onPressed: () {},
-                style: ButtonStyle(
-                  shape: MaterialStateProperty.all(
-                    RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0)),
-                  ),
-                ),
-                child: Text(
-                  buttonText,
-                  style: buttonTextColor,
-                ),
+            Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: Text(
+                bigText,
+                style: TextStyles.balanceNumber,
               ),
             ),
           ],

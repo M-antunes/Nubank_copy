@@ -1,28 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_copy/shared/themes/app_colors.dart';
 
-class OptionWppPaymentWidget extends StatelessWidget {
+import 'package:nubank_copy/shared/themes/app_colors.dart';
+import 'package:nubank_copy/shared/themes/app_text_styles.dart';
+
+class OptionLoanWidget extends StatelessWidget {
   final IconData icon;
   final String descriptionText;
   final String smallText;
-  final String smallText2;
-  final TextStyle? descriptionTextStyle;
-  final TextStyle? smallTextStyle;
-  final TextStyle? smallTextStyle2;
+  final String limit;
   final String buttonText;
-  final TextStyle buttonTextColor;
 
-  const OptionWppPaymentWidget({
+  const OptionLoanWidget({
     Key? key,
     required this.icon,
     required this.descriptionText,
     required this.smallText,
-    required this.smallText2,
-    this.descriptionTextStyle,
-    this.smallTextStyle,
-    this.smallTextStyle2,
+    this.limit = "",
     required this.buttonText,
-    required this.buttonTextColor,
   }) : super(key: key);
 
   @override
@@ -50,8 +44,8 @@ class OptionWppPaymentWidget extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text(
-                    smallText,
-                    style: smallTextStyle,
+                    descriptionText,
+                    style: TextStyles.creditBillText,
                   ),
                 ),
               ],
@@ -59,16 +53,13 @@ class OptionWppPaymentWidget extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(5.0),
               child: Text(
-                descriptionText,
-                style: descriptionTextStyle,
+                smallText,
+                style: TextStyles.desriptionText,
               ),
             ),
-            Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text(
-                smallText2,
-                style: smallTextStyle2,
-              ),
+            Text(
+              limit,
+              style: TextStyles.desriptionTextBold,
             ),
             Container(
               child: OutlinedButton(
@@ -81,7 +72,7 @@ class OptionWppPaymentWidget extends StatelessWidget {
                 ),
                 child: Text(
                   buttonText,
-                  style: buttonTextColor,
+                  style: TextStyles.isuranceButton,
                 ),
               ),
             ),

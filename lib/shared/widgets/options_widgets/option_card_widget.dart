@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_copy/shared/themes/app_colors.dart';
 
-class OptionBalanceWidget extends StatelessWidget {
+import 'package:nubank_copy/shared/themes/app_colors.dart';
+import 'package:nubank_copy/shared/themes/app_text_styles.dart';
+
+class OptionCardWidget extends StatelessWidget {
   final IconData icon;
   final String descriptionText;
   final String smallText;
   final String bigText;
-  final TextStyle? descriptionTextStyle;
-  final TextStyle? smallTextStyle;
-  final TextStyle? bigTextStyle;
+  final String limit;
+  final String smallText2;
 
-  const OptionBalanceWidget({
+  const OptionCardWidget({
     Key? key,
     required this.icon,
     required this.descriptionText,
-    this.bigText = "",
     required this.smallText,
-    this.descriptionTextStyle,
-    this.bigTextStyle,
-    this.smallTextStyle,
+    this.bigText = "",
+    this.limit = "",
+    this.smallText2 = "",
   }) : super(key: key);
 
   @override
@@ -47,7 +47,7 @@ class OptionBalanceWidget extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
                     descriptionText,
-                    style: descriptionTextStyle,
+                    style: TextStyles.creditBillText,
                   ),
                 ),
               ],
@@ -56,15 +56,23 @@ class OptionBalanceWidget extends StatelessWidget {
               padding: const EdgeInsets.all(5.0),
               child: Text(
                 smallText,
-                style: smallTextStyle,
+                style: TextStyles.desriptionText,
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(5.0),
               child: Text(
                 bigText,
-                style: bigTextStyle,
+                style: TextStyles.creditBillNumber,
               ),
+            ),
+            Text(
+              smallText2,
+              style: TextStyles.desriptionText,
+            ),
+            Text(
+              limit,
+              style: TextStyles.creditAvailableLimit,
             ),
           ],
         ),

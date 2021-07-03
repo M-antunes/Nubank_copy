@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_copy/shared/themes/app_colors.dart';
 
 class AppbarButtonWidget extends StatelessWidget {
   final IconData icon;
@@ -10,20 +11,17 @@ class AppbarButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(right: 10),
-      child: Container(
-        decoration: BoxDecoration(
-            border:
-                Border.all(color: Color(0xffA74EC7), style: BorderStyle.none),
-            borderRadius: BorderRadius.all(Radius.circular(50))),
-        child: IconButton(
-          splashRadius: 1,
-          iconSize: 32,
-          icon: Icon(icon),
-          color: Colors.white,
-          onPressed: () {},
-        ),
+    return MaterialButton(
+      padding: EdgeInsets.all(5),
+      color: AppColors.navigationBarButton,
+      shape: CircleBorder(),
+      onPressed: () {},
+      child: IconButton(
+        splashRadius: 1,
+        iconSize: 30,
+        icon: Icon(icon),
+        color: Colors.white,
+        onPressed: () {},
       ),
     );
   }

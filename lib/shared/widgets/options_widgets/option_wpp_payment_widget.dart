@@ -1,24 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_copy/shared/themes/app_colors.dart';
 
-class OptionGooglePayWidget extends StatelessWidget {
+import 'package:nubank_copy/shared/themes/app_colors.dart';
+import 'package:nubank_copy/shared/themes/app_text_styles.dart';
+
+class OptionWppPaymentWidget extends StatelessWidget {
   final IconData icon;
+  final String descriptionText;
   final String smallText;
   final String smallText2;
-  final TextStyle? smallTextStyle;
-  final TextStyle? smallTextStyle2;
   final String buttonText;
-  final TextStyle buttonTextColor;
 
-  const OptionGooglePayWidget({
+  const OptionWppPaymentWidget({
     Key? key,
     required this.icon,
+    required this.descriptionText,
     required this.smallText,
     required this.smallText2,
-    this.smallTextStyle,
-    this.smallTextStyle2,
     required this.buttonText,
-    required this.buttonTextColor,
   }) : super(key: key);
 
   @override
@@ -30,9 +28,9 @@ class OptionGooglePayWidget extends StatelessWidget {
           Radius.circular(4),
         ),
       ),
-      margin: const EdgeInsets.only(top: 23, left: 23, right: 23),
+      margin: EdgeInsets.only(top: 23, left: 23, right: 23),
       child: Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding: EdgeInsets.all(12.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,23 +38,30 @@ class OptionGooglePayWidget extends StatelessWidget {
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: EdgeInsets.all(8.0),
                   child: Icon(icon),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: EdgeInsets.all(8.0),
                   child: Text(
                     smallText,
-                    style: smallTextStyle,
+                    style: TextStyles.creditBillText,
                   ),
                 ),
               ],
             ),
             Padding(
-              padding: const EdgeInsets.all(5.0),
+              padding: EdgeInsets.all(5.0),
+              child: Text(
+                descriptionText,
+                style: TextStyles.desriptionTextBold,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(8.0),
               child: Text(
                 smallText2,
-                style: smallTextStyle2,
+                style: TextStyles.desriptionText,
               ),
             ),
             Container(
@@ -70,7 +75,7 @@ class OptionGooglePayWidget extends StatelessWidget {
                 ),
                 child: Text(
                   buttonText,
-                  style: buttonTextColor,
+                  style: TextStyles.isuranceButton,
                 ),
               ),
             ),
