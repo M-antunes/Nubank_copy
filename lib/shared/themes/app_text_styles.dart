@@ -10,7 +10,7 @@ class TextStyles {
     color: AppColors.secondary,
   );
   static final userName = GoogleFonts.roboto(
-    fontSize: 32,
+    fontSize: 28,
     fontWeight: FontWeight.w600,
     color: AppColors.secondary,
   );
@@ -65,8 +65,8 @@ class TextStyles {
     color: AppColors.primary,
   );
   static final bottomIconText = GoogleFonts.roboto(
-    fontSize: 16,
-    fontWeight: FontWeight.w200,
-    color: AppColors.secondary,
+    fontSize: 14,
+    fontWeight: FontWeight.w300,
+    color: AppColors.bottomIcon,
   );
 }

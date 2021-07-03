@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_copy/shared/themes/app_colors.dart';
 
 class OptionBalanceWidget extends StatelessWidget {
   final IconData icon;
   final String descriptionText;
   final String smallText;
-  final String? bigText;
+  final String bigText;
   final TextStyle? descriptionTextStyle;
   final TextStyle? smallTextStyle;
   final TextStyle? bigTextStyle;
@@ -23,8 +24,13 @@ class OptionBalanceWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        color: AppColors.secondary,
+        borderRadius: BorderRadius.all(
+          Radius.circular(4),
+        ),
+      ),
       margin: const EdgeInsets.only(top: 23, left: 23, right: 23),
-      color: Colors.white,
       child: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(
@@ -56,7 +62,7 @@ class OptionBalanceWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(5.0),
               child: Text(
-                "$bigText",
+                bigText,
                 style: bigTextStyle,
               ),
             ),

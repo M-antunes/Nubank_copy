@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_copy/shared/themes/app_colors.dart';
 
 class OptionCardWidget extends StatelessWidget {
   final IconData icon;
@@ -31,8 +32,13 @@ class OptionCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        color: AppColors.secondary,
+        borderRadius: BorderRadius.all(
+          Radius.circular(4),
+        ),
+      ),
       margin: const EdgeInsets.only(top: 23, left: 23, right: 23),
-      color: Colors.white,
       child: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(

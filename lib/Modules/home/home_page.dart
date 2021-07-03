@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 import 'package:nubank_copy/shared/widgets/appbar_button/appbar_button_widget.dart';
-import 'package:nubank_copy/shared/widgets/navigation_bar/navigation_bar_widget.dart';
+import 'package:nubank_copy/shared/widgets/navigation_bar/navigation_bar_multi_words_widget.dart';
+import 'package:nubank_copy/shared/widgets/navigation_bar/navigation_bar_single_word_widget.dart';
 import 'package:nubank_copy/shared/widgets/options/option_card_widget.dart';
 import 'package:nubank_copy/shared/widgets/options/option_balance_widget.dart';
 import 'package:nubank_copy/shared/widgets/options/option_google_pay_widget.dart';
@@ -18,11 +19,11 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.primary,
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(110),
+        preferredSize: Size.fromHeight(95),
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 70, bottom: 10),
+              padding: const EdgeInsets.only(top: 70),
               child: Row(
                 children: [
                   Expanded(
@@ -119,6 +120,57 @@ class HomePage extends StatelessWidget {
               buttonTextColor: TextStyles.isuranceButton,
             )
           ],
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 8),
+        child: IntrinsicHeight(
+          child: Container(
+            height: 125,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                NavigationBarSingleWordWidget(
+                    icon: Icons.api_outlined, text: "Pix"),
+                NavigationBarSingleWordWidget(
+                    icon: Icons.qr_code_2_sharp, text: "Pagar"),
+                NavigationBarMultiWordsWidget(
+                    icon: Icons.perm_contact_cal_outlined,
+                    upperText: "Indicar",
+                    lowerText: "amigos"),
+                NavigationBarSingleWordWidget(
+                    icon: Icons.arrow_circle_up_outlined, text: "Transferir"),
+                NavigationBarSingleWordWidget(
+                    icon: Icons.arrow_circle_down_outlined, text: "Depositar"),
+                NavigationBarSingleWordWidget(
+                    icon: Icons.local_atm_outlined, text: "Empréstimos"),
+                NavigationBarMultiWordsWidget(
+                    icon: Icons.settings_cell_sharp,
+                    upperText: "Cartão",
+                    lowerText: "virtual"),
+                NavigationBarMultiWordsWidget(
+                    icon: Icons.phone_android_sharp,
+                    upperText: "Recarga de",
+                    lowerText: "celular"),
+                NavigationBarMultiWordsWidget(
+                    icon: Icons.settings_ethernet_sharp,
+                    upperText: "Ajustar",
+                    lowerText: "limite"),
+                NavigationBarMultiWordsWidget(
+                    icon: Icons.no_cell_sharp,
+                    upperText: "Bloquear",
+                    lowerText: "cartão"),
+                NavigationBarSingleWordWidget(
+                    icon: Icons.arrow_circle_down_outlined, text: "Cobrar"),
+                NavigationBarSingleWordWidget(
+                    icon: Icons.local_activity_outlined, text: "Doação"),
+                NavigationBarMultiWordsWidget(
+                    icon: Icons.chat_bubble_outline,
+                    upperText: "Me",
+                    lowerText: "ajuda"),
+              ],
+            ),
+          ),
         ),
       ),
     );
