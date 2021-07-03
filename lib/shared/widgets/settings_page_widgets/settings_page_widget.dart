@@ -7,28 +7,36 @@ class SettingsPageWidget extends StatelessWidget {
   final IconData infoIcon;
   final String text;
   final IconData arrowIcon;
+  final bool hasDivider;
   const SettingsPageWidget({
     Key? key,
     required this.infoIcon,
     required this.text,
     required this.arrowIcon,
+    this.hasDivider = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
+        dividerCheck(),
         Padding(
-          padding: const EdgeInsets.only(top: 20, right: 30, left: 10),
+          padding: const EdgeInsets.only(top: 20, right: 30, left: 40),
           child: Row(
             children: [
               Icon(
                 infoIcon,
                 color: AppColors.secondary,
               ),
-              Text(
-                text,
-                style: TextStyles.settingOptions,
+              SizedBox(
+                width: 20,
+              ),
+              Expanded(
+                child: Text(
+                  text,
+                  style: TextStyles.settingOptions,
+                ),
               ),
               Icon(
                 arrowIcon,
@@ -47,5 +55,18 @@ class SettingsPageWidget extends StatelessWidget {
         )
       ],
     );
+  }
+
+  Widget dividerCheck() {
+    if (hasDivider)
+      return Padding(
+        padding: EdgeInsets.only(top: 20, left: 20, right: 20),
+        child: Divider(
+          height: 1,
+          thickness: 1,
+          color: AppColors.secondary,
+        ),
+      );
+    return Container();
   }
 }
