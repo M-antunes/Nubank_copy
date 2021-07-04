@@ -4,21 +4,8 @@ import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 
 class OptionCardWidget extends StatelessWidget {
-  final IconData icon;
-  final String descriptionText;
-  final String smallText;
-  final String bigText;
-  final String limit;
-  final String smallText2;
-
   const OptionCardWidget({
     Key? key,
-    required this.icon,
-    required this.descriptionText,
-    required this.smallText,
-    this.bigText = "",
-    this.limit = "",
-    this.smallText2 = "",
   }) : super(key: key);
 
   @override
@@ -41,12 +28,12 @@ class OptionCardWidget extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Icon(icon),
+                  child: Icon(Icons.credit_card),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    descriptionText,
+                    "Cartão de Crédito",
                     style: TextStyles.creditBillText,
                   ),
                 ),
@@ -55,23 +42,23 @@ class OptionCardWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(5.0),
               child: Text(
-                smallText,
+                "Fatura atual",
                 style: TextStyles.desriptionText,
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(5.0),
               child: Text(
-                bigText,
+                "RS 700,00",
                 style: TextStyles.creditBillNumber,
               ),
             ),
             Text(
-              smallText2,
+              "Limite disponível para compras",
               style: TextStyles.desriptionText,
             ),
             Text(
-              limit,
+              "RS 1.500,00",
               style: TextStyles.creditAvailableLimit,
             ),
           ],

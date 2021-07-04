@@ -69,48 +69,12 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            OptionCardWidget(
-              icon: Icons.credit_card,
-              descriptionText: "Cartão de Crédito",
-              smallText: "Fatura atual",
-              bigText: "RS 700,00",
-              smallText2: "Limite disponível para compras ",
-              limit: "RS 1.500,00",
-            ),
-            OptionBalanceWidget(
-              icon: Icons.account_balance_outlined,
-              descriptionText: "Conta",
-              smallText: "Saldo disponível",
-              bigText: "RS 12.000,00",
-            ),
-            OptionLoanWidget(
-              icon: Icons.local_atm_outlined,
-              descriptionText: "Empréstimo",
-              smallText: "Valor disponível de até",
-              limit: "RS 25.000,00",
-              buttonText: "Simular Empréstimo",
-            ),
-            OptionLifeInsuranceWidget(
-              icon: Icons.health_and_safety_outlined,
-              bigText: "Seguro de Vida",
-              descriptionText:
-                  "Conheça o Nubank Vida: um seguro simples e que cabe no bolso",
-              buttonText: "Conhecer",
-            ),
-            OptionWppPaymentWidget(
-              icon: Icons.whatshot_outlined,
-              smallText: "Pagamentos no WhatsApp",
-              descriptionText: "Envie e receba dinheiro sem sair da conversa",
-              smallText2:
-                  'Os pagamentos no WhatsApp são seguros, rápidos e sem tarifas. Tão fácil quanto mandar uma foto de "bom dia" no grupo da família.',
-              buttonText: "Quero Conhecer",
-            ),
-            OptionGooglePayWidget(
-              icon: Icons.phone_android_outlined,
-              smallText: "Google Pay",
-              smallText2: "Use o Google Pay com seus cartões Nubank",
-              buttonText: "Registrar meu Cartão",
-            )
+            OptionCardWidget(),
+            OptionBalanceWidget(),
+            OptionLoanWidget(),
+            OptionLifeInsuranceWidget(),
+            OptionWppPaymentWidget(),
+            OptionGooglePayWidget()
           ],
         ),
       ),
@@ -121,7 +85,10 @@ class HomePage extends StatelessWidget {
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: [
-              NavigationBarWidget(icon: Icons.api_outlined, upperText: "Pix"),
+              NavigationBarWidget(
+                icon: Icons.api_outlined,
+                upperText: "Pix",
+              ),
               NavigationBarWidget(
                   icon: Icons.qr_code_2_sharp, upperText: "Pagar"),
               NavigationBarWidget(
@@ -149,7 +116,7 @@ class HomePage extends StatelessWidget {
                 upperText: "Recarga de\ncelular",
               ),
               NavigationBarWidget(
-                icon: Icons.settings_ethernet_sharp,
+                icon: Icons.account_tree_outlined,
                 upperText: "Ajustar\nlimite",
               ),
               NavigationBarWidget(
@@ -165,7 +132,7 @@ class HomePage extends StatelessWidget {
                 upperText: "Doação",
               ),
               NavigationBarWidget(
-                icon: Icons.chat_bubble_outline,
+                icon: Icons.contact_support_outlined,
                 upperText: "Me\najuda",
               ),
             ],

@@ -79,4 +79,9 @@ class TextStyles {
     fontWeight: FontWeight.w400,
     color: AppColors.bottomIcon,
   );
+  static final settingsLeaveApp = GoogleFonts.roboto(
+    fontSize: 19,
+    fontWeight: FontWeight.w500,
+    color: AppColors.bottomIcon,
+  );
 }

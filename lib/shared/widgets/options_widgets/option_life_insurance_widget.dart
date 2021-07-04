@@ -1,19 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
+import 'package:nubank_copy/shared/widgets/options_widgets/button_format_widget.dart';
 
 class OptionLifeInsuranceWidget extends StatelessWidget {
-  final IconData icon;
-  final String descriptionText;
-  final String bigText;
-  final String buttonText;
-
   const OptionLifeInsuranceWidget({
     Key? key,
-    required this.icon,
-    required this.descriptionText,
-    this.bigText = "",
-    required this.buttonText,
   }) : super(key: key);
 
   @override
@@ -36,12 +28,12 @@ class OptionLifeInsuranceWidget extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Icon(icon),
+                  child: Icon(Icons.health_and_safety_outlined),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    bigText,
+                    "Seguro de Vida",
                     style: TextStyles.insuranceText,
                   ),
                 ),
@@ -50,25 +42,13 @@ class OptionLifeInsuranceWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(5.0),
               child: Text(
-                descriptionText,
+                "Conheça o Nubank Vida: um seguro simples e que cabe no bolso",
                 style: TextStyles.desriptionText,
               ),
             ),
-            Container(
-              child: OutlinedButton(
-                onPressed: () {},
-                style: ButtonStyle(
-                  shape: MaterialStateProperty.all(
-                    RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0)),
-                  ),
-                ),
-                child: Text(
-                  buttonText,
-                  style: TextStyles.isuranceButton,
-                ),
-              ),
-            ),
+            ButtonFormatWidget(
+              testText: "Conhecer",
+            )
           ],
         ),
       ),

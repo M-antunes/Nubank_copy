@@ -9,7 +9,6 @@ class SettingsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: AppColors.primary,
       appBar: PreferredSize(
@@ -58,59 +57,79 @@ class SettingsPage extends StatelessWidget {
           ),
           Expanded(
             child: SingleChildScrollView(
-              child: Container(
-                height: size.height,
-                child: ListView(
-                  physics: NeverScrollableScrollPhysics(),
-                  children: [
-                    SettingsPageWidget(
-                      hasDivider: true,
-                      infoIcon: Icons.mail_outline_sharp,
-                      text: "Notificações",
-                      arrowIcon: Icons.arrow_forward_ios_sharp,
+              child: Column(
+                children: [
+                  SettingsPageWidget(
+                    hasDivider: true,
+                    infoIcon: Icons.mail_outline_sharp,
+                    text: "Notificações",
+                    arrowIcon: Icons.arrow_forward_ios_sharp,
+                  ),
+                  SettingsPageWidget(
+                    infoIcon: Icons.contact_support_outlined,
+                    text: "Me ajuda",
+                    arrowIcon: Icons.arrow_forward_ios_sharp,
+                  ),
+                  SettingsPageWidget(
+                    infoIcon: Icons.perm_contact_cal_outlined,
+                    text: "Perfil",
+                    arrowIcon: Icons.arrow_forward_ios_sharp,
+                  ),
+                  SettingsPageWidget(
+                    infoIcon: Icons.account_tree_outlined,
+                    text: "Configurar conta",
+                    arrowIcon: Icons.arrow_forward_ios_sharp,
+                  ),
+                  SettingsPageWidget(
+                    infoIcon: Icons.api_outlined,
+                    text: "Minhas chaves Pix",
+                    arrowIcon: Icons.arrow_forward_ios_sharp,
+                  ),
+                  SettingsPageWidget(
+                    infoIcon: Icons.settings_cell_sharp,
+                    text: "Configurar cartão",
+                    arrowIcon: Icons.arrow_forward_ios_sharp,
+                  ),
+                  SettingsPageWidget(
+                    infoIcon: Icons.store_mall_directory_sharp,
+                    text: "Pedir conta PJ",
+                    arrowIcon: Icons.arrow_forward_ios_sharp,
+                  ),
+                  SettingsPageWidget(
+                    infoIcon: Icons.stay_primary_portrait_rounded,
+                    text: "Configuração do app",
+                    arrowIcon: Icons.arrow_forward_ios_sharp,
+                  ),
+                  SettingsPageWidget(
+                    infoIcon: Icons.contact_support_outlined,
+                    text: "Sobre",
+                    arrowIcon: Icons.arrow_forward_ios_sharp,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20, bottom: 10),
+                    child: Container(
+                      child: OutlinedButton(
+                        onPressed: () {},
+                        style: ButtonStyle(
+                          side: MaterialStateProperty.all(BorderSide(
+                              style: BorderStyle.solid,
+                              color: Color(0xffffffff))),
+                          shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10.0))),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 80, vertical: 4),
+                          child: Text(
+                            "Sair do App",
+                            style: TextStyles.settingsLeaveApp,
+                          ),
+                        ),
+                      ),
                     ),
-                    SettingsPageWidget(
-                      infoIcon: Icons.mail_outline_sharp,
-                      text: "Me ajuda",
-                      arrowIcon: Icons.arrow_forward_ios_sharp,
-                    ),
-                    SettingsPageWidget(
-                      infoIcon: Icons.mail_outline_sharp,
-                      text: "Perfil",
-                      arrowIcon: Icons.arrow_forward_ios_sharp,
-                    ),
-                    SettingsPageWidget(
-                      infoIcon: Icons.mail_outline_sharp,
-                      text: "Configurar conta",
-                      arrowIcon: Icons.arrow_forward_ios_sharp,
-                    ),
-                    SettingsPageWidget(
-                      infoIcon: Icons.mail_outline_sharp,
-                      text: "Minhas chaves Pix",
-                      arrowIcon: Icons.arrow_forward_ios_sharp,
-                    ),
-                    SettingsPageWidget(
-                      infoIcon: Icons.mail_outline_sharp,
-                      text: "Configurar cartão",
-                      arrowIcon: Icons.arrow_forward_ios_sharp,
-                    ),
-                    SettingsPageWidget(
-                      infoIcon: Icons.mail_outline_sharp,
-                      text: "Pedir conta PJ",
-                      arrowIcon: Icons.arrow_forward_ios_sharp,
-                    ),
-                    SettingsPageWidget(
-                      infoIcon: Icons.mail_outline_sharp,
-                      text: "Configuração do app",
-                      arrowIcon: Icons.arrow_forward_ios_sharp,
-                    ),
-                    SettingsPageWidget(
-                      infoIcon: Icons.mail_outline_sharp,
-                      text: "Sobre",
-                      arrowIcon: Icons.arrow_forward_ios_sharp,
-                    ),
-                  ],
-                ),
+                  )
+                ],
               ),
             ),
           ),

@@ -1,20 +1,11 @@
 import 'package:flutter/material.dart';
-
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
+import 'package:nubank_copy/shared/widgets/options_widgets/button_format_widget.dart';
 
 class OptionGooglePayWidget extends StatelessWidget {
-  final IconData icon;
-  final String smallText;
-  final String smallText2;
-  final String buttonText;
-
   const OptionGooglePayWidget({
     Key? key,
-    required this.icon,
-    required this.smallText,
-    required this.smallText2,
-    required this.buttonText,
   }) : super(key: key);
 
   @override
@@ -37,12 +28,12 @@ class OptionGooglePayWidget extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Icon(icon),
+                  child: Icon(Icons.phone_android_outlined),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    smallText,
+                    "Google Pay",
                     style: TextStyles.creditBillText,
                   ),
                 ),
@@ -51,25 +42,11 @@ class OptionGooglePayWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(5.0),
               child: Text(
-                smallText2,
+                "Use o Google Pay com seus cartões Nubank",
                 style: TextStyles.creditBillText,
               ),
             ),
-            Container(
-              child: OutlinedButton(
-                onPressed: () {},
-                style: ButtonStyle(
-                  shape: MaterialStateProperty.all(
-                    RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0)),
-                  ),
-                ),
-                child: Text(
-                  buttonText,
-                  style: TextStyles.isuranceButton,
-                ),
-              ),
-            ),
+            ButtonFormatWidget(testText: "Registrar meu cartão")
           ],
         ),
       ),
