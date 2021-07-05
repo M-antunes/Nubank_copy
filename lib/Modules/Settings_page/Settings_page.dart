@@ -37,7 +37,11 @@ class SettingsPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  AppbarButtonWidget(icon: Icons.close),
+                  AppbarButtonWidget(
+                    icon: Icons.close,
+                    color: AppColors.secondary,
+                    buttonColor: AppColors.navigationBarButton,
+                  ),
                 ],
               ),
             ),
@@ -63,47 +67,38 @@ class SettingsPage extends StatelessWidget {
                     hasDivider: true,
                     infoIcon: Icons.mail_outline_sharp,
                     text: "Notificações",
-                    arrowIcon: Icons.arrow_forward_ios_sharp,
                   ),
                   SettingsPageWidget(
                     infoIcon: Icons.contact_support_outlined,
                     text: "Me ajuda",
-                    arrowIcon: Icons.arrow_forward_ios_sharp,
                   ),
                   SettingsPageWidget(
                     infoIcon: Icons.perm_contact_cal_outlined,
                     text: "Perfil",
-                    arrowIcon: Icons.arrow_forward_ios_sharp,
                   ),
                   SettingsPageWidget(
                     infoIcon: Icons.account_tree_outlined,
                     text: "Configurar conta",
-                    arrowIcon: Icons.arrow_forward_ios_sharp,
                   ),
                   SettingsPageWidget(
                     infoIcon: Icons.api_outlined,
                     text: "Minhas chaves Pix",
-                    arrowIcon: Icons.arrow_forward_ios_sharp,
                   ),
                   SettingsPageWidget(
                     infoIcon: Icons.settings_cell_sharp,
                     text: "Configurar cartão",
-                    arrowIcon: Icons.arrow_forward_ios_sharp,
                   ),
                   SettingsPageWidget(
                     infoIcon: Icons.store_mall_directory_sharp,
                     text: "Pedir conta PJ",
-                    arrowIcon: Icons.arrow_forward_ios_sharp,
                   ),
                   SettingsPageWidget(
                     infoIcon: Icons.stay_primary_portrait_rounded,
                     text: "Configuração do app",
-                    arrowIcon: Icons.arrow_forward_ios_sharp,
                   ),
                   SettingsPageWidget(
                     infoIcon: Icons.contact_support_outlined,
                     text: "Sobre",
-                    arrowIcon: Icons.arrow_forward_ios_sharp,
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 20, bottom: 10),

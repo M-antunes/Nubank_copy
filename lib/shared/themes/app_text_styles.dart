@@ -84,4 +84,9 @@ class TextStyles {
     fontWeight: FontWeight.w500,
     color: AppColors.bottomIcon,
   );
+  static final pixPage = GoogleFonts.roboto(
+    fontSize: 30,
+    fontWeight: FontWeight.w500,
+    color: AppColors.description,
+  );
 }

@@ -49,13 +49,19 @@ class HomePage extends StatelessWidget {
                     child: Row(
                       children: [
                         SizedBox(
-                            width: 70,
-                            child: AppbarButtonWidget(
-                                icon: Icons.remove_red_eye_outlined)),
+                          width: 70,
+                          child: AppbarButtonWidget(
+                            icon: Icons.remove_red_eye_outlined,
+                            color: AppColors.secondary,
+                            buttonColor: AppColors.navigationBarButton,
+                          ),
+                        ),
                         SizedBox(
                           width: 70,
-                          child:
-                              AppbarButtonWidget(icon: Icons.settings_outlined),
+                          child: AppbarButtonWidget(
+                              icon: Icons.settings_outlined,
+                              color: AppColors.secondary,
+                              buttonColor: AppColors.navigationBarButton),
                         ),
                       ],
                     ),
@@ -90,7 +96,9 @@ class HomePage extends StatelessWidget {
                 upperText: "Pix",
               ),
               NavigationBarWidget(
-                  icon: Icons.qr_code_2_sharp, upperText: "Pagar"),
+                icon: Icons.qr_code_2_sharp,
+                upperText: "Pagar",
+              ),
               NavigationBarWidget(
                 icon: Icons.perm_contact_cal_outlined,
                 upperText: "Indicar\namigos",
