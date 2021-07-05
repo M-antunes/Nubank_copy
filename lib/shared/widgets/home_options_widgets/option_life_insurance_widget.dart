@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
-import 'package:nubank_copy/shared/widgets/options_widgets/button_format_widget.dart';
+import 'package:nubank_copy/shared/widgets/button_format_widget/button_format_widget.dart';
 
-class OptionLoanWidget extends StatelessWidget {
-  const OptionLoanWidget({
+class OptionLifeInsuranceWidget extends StatelessWidget {
+  const OptionLifeInsuranceWidget({
     Key? key,
   }) : super(key: key);
 
@@ -18,9 +17,9 @@ class OptionLoanWidget extends StatelessWidget {
           Radius.circular(4),
         ),
       ),
-      margin: EdgeInsets.only(top: 23, left: 23, right: 23),
+      margin: const EdgeInsets.only(top: 23, left: 23, right: 23),
       child: Padding(
-        padding: EdgeInsets.all(12.0),
+        padding: const EdgeInsets.all(12.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -28,31 +27,27 @@ class OptionLoanWidget extends StatelessWidget {
             Row(
               children: [
                 Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Icon(Icons.local_atm_outlined),
+                  padding: const EdgeInsets.all(8.0),
+                  child: Icon(Icons.health_and_safety_outlined),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    "Empréstimo",
-                    style: TextStyles.creditBillText,
+                    "Seguro de Vida",
+                    style: TextStyles.insuranceText,
                   ),
                 ),
               ],
             ),
             Padding(
-              padding: EdgeInsets.all(5.0),
+              padding: const EdgeInsets.all(5.0),
               child: Text(
-                "Valor disponível de até:",
+                "Conheça o Nubank Vida: um seguro simples e que cabe no bolso",
                 style: TextStyles.desriptionText,
               ),
             ),
-            Text(
-              "RS 25.000,00",
-              style: TextStyles.desriptionTextBold,
-            ),
             ButtonFormatWidget(
-              testText: "Simular Empréstimo",
+              testText: "Conhecer",
             )
           ],
         ),

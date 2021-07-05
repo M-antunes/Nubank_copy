@@ -6,18 +6,28 @@ import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 class NavigationBarWidget extends StatelessWidget {
   final IconData icon;
   final String upperText;
+  final Widget navigationPage;
   const NavigationBarWidget({
     Key? key,
     required this.icon,
     required this.upperText,
+    required this.navigationPage,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(bottom: 10),
-      child: ButtonBar(children: [
-        Container(
+      child: (TextButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => navigationPage,
+            ),
+          );
+        },
+        child: Container(
           decoration: BoxDecoration(
             color: AppColors.navigationBarButton,
             borderRadius: BorderRadius.all(
@@ -37,7 +47,7 @@ class NavigationBarWidget extends StatelessWidget {
                   color: Colors.grey[50],
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 10),
+                  padding: EdgeInsets.only(bottom: 10),
                   child: Expanded(
                     child: Align(
                       alignment: Alignment.bottomLeft,
@@ -52,7 +62,7 @@ class NavigationBarWidget extends StatelessWidget {
             ),
           ),
         ),
-      ]),
+      )),
     );
   }
 }

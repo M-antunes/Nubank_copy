@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_copy/Modules/navigation_bar_pages/pix_area_page/pix_area_page.dart';
+import 'package:nubank_copy/Modules/pay_bill_page/pay_bill_page.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
-import 'package:nubank_copy/shared/widgets/appbar_button/appbar_button_widget.dart';
-import 'package:nubank_copy/shared/widgets/navigation_bar_widget/navigation_bar_widget.dart';
-import 'package:nubank_copy/shared/widgets/options_widgets/option_balance_widget.dart';
-import 'package:nubank_copy/shared/widgets/options_widgets/option_card_widget.dart';
-import 'package:nubank_copy/shared/widgets/options_widgets/option_google_pay_widget.dart';
-import 'package:nubank_copy/shared/widgets/options_widgets/option_life_insurance_widget.dart';
-import 'package:nubank_copy/shared/widgets/options_widgets/option_loan_widget.dart';
-import 'package:nubank_copy/shared/widgets/options_widgets/option_wpp_payment_widget.dart';
+import 'package:nubank_copy/shared/widgets/appbar_button_widget/appbar_button_widget.dart';
+import 'package:nubank_copy/shared/widgets/home_options_widgets/navigation_bar_widget/navigation_bar_widget.dart';
+import 'package:nubank_copy/shared/widgets/home_options_widgets/option_balance_widget.dart';
+import 'package:nubank_copy/shared/widgets/home_options_widgets/option_card_widget.dart';
+import 'package:nubank_copy/shared/widgets/home_options_widgets/option_google_pay_widget.dart';
+import 'package:nubank_copy/shared/widgets/home_options_widgets/option_life_insurance_widget.dart';
+import 'package:nubank_copy/shared/widgets/home_options_widgets/option_loan_widget.dart';
+import 'package:nubank_copy/shared/widgets/home_options_widgets/option_wpp_payment_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -92,54 +94,67 @@ class HomePage extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             children: [
               NavigationBarWidget(
+                navigationPage: PixAreaPage(),
                 icon: Icons.api_outlined,
                 upperText: "Pix",
               ),
               NavigationBarWidget(
+                navigationPage: PayBillPage(),
                 icon: Icons.qr_code_2_sharp,
                 upperText: "Pagar",
               ),
               NavigationBarWidget(
+                navigationPage: PixAreaPage(),
                 icon: Icons.perm_contact_cal_outlined,
                 upperText: "Indicar\namigos",
               ),
               NavigationBarWidget(
+                navigationPage: PixAreaPage(),
                 icon: Icons.arrow_circle_up_outlined,
                 upperText: "Transferir",
               ),
               NavigationBarWidget(
+                navigationPage: PixAreaPage(),
                 icon: Icons.arrow_circle_down_outlined,
                 upperText: "Depositar",
               ),
               NavigationBarWidget(
+                navigationPage: PixAreaPage(),
                 icon: Icons.local_atm_outlined,
                 upperText: "Empréstimos",
               ),
               NavigationBarWidget(
+                navigationPage: PixAreaPage(),
                 icon: Icons.settings_cell_sharp,
                 upperText: "Cartão\nvirtual",
               ),
               NavigationBarWidget(
+                navigationPage: PixAreaPage(),
                 icon: Icons.phone_android_sharp,
                 upperText: "Recarga de\ncelular",
               ),
               NavigationBarWidget(
+                navigationPage: PixAreaPage(),
                 icon: Icons.account_tree_outlined,
                 upperText: "Ajustar\nlimite",
               ),
               NavigationBarWidget(
+                navigationPage: PixAreaPage(),
                 icon: Icons.no_cell_sharp,
                 upperText: "Bloquear\ncartão",
               ),
               NavigationBarWidget(
+                navigationPage: PixAreaPage(),
                 icon: Icons.arrow_circle_down_outlined,
                 upperText: "Cobrar",
               ),
               NavigationBarWidget(
+                navigationPage: PixAreaPage(),
                 icon: Icons.local_activity_outlined,
                 upperText: "Doação",
               ),
               NavigationBarWidget(
+                navigationPage: PixAreaPage(),
                 icon: Icons.contact_support_outlined,
                 upperText: "Me\najuda",
               ),

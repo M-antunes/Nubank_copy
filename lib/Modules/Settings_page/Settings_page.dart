@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
-import 'package:nubank_copy/shared/widgets/appbar_button/appbar_button_widget.dart';
+import 'package:nubank_copy/shared/widgets/appbar_button_widget/appbar_button_widget.dart';
 import 'package:nubank_copy/shared/widgets/settings_page_widgets/settings_page_widget.dart';
 
 class SettingsPage extends StatelessWidget {
@@ -38,6 +38,7 @@ class SettingsPage extends StatelessWidget {
                     ),
                   ),
                   AppbarButtonWidget(
+                    hasCloseButton: true,
                     icon: Icons.close,
                     color: AppColors.secondary,
                     buttonColor: AppColors.navigationBarButton,

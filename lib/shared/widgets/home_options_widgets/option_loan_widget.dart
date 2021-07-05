@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
-import 'package:nubank_copy/shared/widgets/options_widgets/button_format_widget.dart';
 
-class OptionGooglePayWidget extends StatelessWidget {
-  const OptionGooglePayWidget({
+import '../button_format_widget/button_format_widget.dart';
+
+class OptionLoanWidget extends StatelessWidget {
+  const OptionLoanWidget({
     Key? key,
   }) : super(key: key);
 
@@ -17,9 +19,9 @@ class OptionGooglePayWidget extends StatelessWidget {
           Radius.circular(4),
         ),
       ),
-      margin: const EdgeInsets.only(top: 23, left: 23, right: 23),
+      margin: EdgeInsets.only(top: 23, left: 23, right: 23),
       child: Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding: EdgeInsets.all(12.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,26 +29,32 @@ class OptionGooglePayWidget extends StatelessWidget {
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Icon(Icons.phone_android_outlined),
+                  padding: EdgeInsets.all(8.0),
+                  child: Icon(Icons.local_atm_outlined),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: EdgeInsets.all(8.0),
                   child: Text(
-                    "Google Pay",
+                    "Empréstimo",
                     style: TextStyles.creditBillText,
                   ),
                 ),
               ],
             ),
             Padding(
-              padding: const EdgeInsets.all(5.0),
+              padding: EdgeInsets.all(5.0),
               child: Text(
-                "Use o Google Pay com seus cartões Nubank",
-                style: TextStyles.creditBillText,
+                "Valor disponível de até:",
+                style: TextStyles.desriptionText,
               ),
             ),
-            ButtonFormatWidget(testText: "Registrar meu cartão")
+            Text(
+              "RS 25.000,00",
+              style: TextStyles.desriptionTextBold,
+            ),
+            ButtonFormatWidget(
+              testText: "Simular Empréstimo",
+            )
           ],
         ),
       ),

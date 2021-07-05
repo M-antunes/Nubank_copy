@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
-import 'package:nubank_copy/shared/widgets/options_widgets/button_format_widget.dart';
+import 'package:nubank_copy/shared/widgets/button_format_widget/button_format_widget.dart';
 
-class OptionLifeInsuranceWidget extends StatelessWidget {
-  const OptionLifeInsuranceWidget({
+class OptionGooglePayWidget extends StatelessWidget {
+  const OptionGooglePayWidget({
     Key? key,
   }) : super(key: key);
 
@@ -28,13 +28,13 @@ class OptionLifeInsuranceWidget extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Icon(Icons.health_and_safety_outlined),
+                  child: Icon(Icons.phone_android_outlined),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    "Seguro de Vida",
-                    style: TextStyles.insuranceText,
+                    "Google Pay",
+                    style: TextStyles.creditBillText,
                   ),
                 ),
               ],
@@ -42,13 +42,11 @@ class OptionLifeInsuranceWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(5.0),
               child: Text(
-                "Conheça o Nubank Vida: um seguro simples e que cabe no bolso",
-                style: TextStyles.desriptionText,
+                "Use o Google Pay com seus cartões Nubank",
+                style: TextStyles.creditBillText,
               ),
             ),
-            ButtonFormatWidget(
-              testText: "Conhecer",
-            )
+            ButtonFormatWidget(testText: "Registrar meu cartão")
           ],
         ),
       ),

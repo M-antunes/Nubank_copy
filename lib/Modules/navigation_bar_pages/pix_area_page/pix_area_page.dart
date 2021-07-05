@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
-import 'package:nubank_copy/shared/widgets/appbar_button/appbar_button_widget.dart';
+import 'package:nubank_copy/shared/widgets/appbar_button_widget/appbar_button_widget.dart';
 import 'package:nubank_copy/shared/widgets/pix_page_widgets/pix_page_bottom_options_widget.dart';
 import 'package:nubank_copy/shared/widgets/pix_page_widgets/pix_page_icon_row_widget.dart';
 
@@ -24,6 +24,7 @@ class _PixAreaPageState extends State<PixAreaPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             AppbarButtonWidget(
+                hasCloseButton: true,
                 hasShape: false,
                 icon: Icons.close,
                 color: AppColors.description,

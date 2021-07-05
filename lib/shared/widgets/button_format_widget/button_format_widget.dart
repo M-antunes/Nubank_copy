@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_copy/Modules/navigation_bar_pages/pix_area_page/pix_area_page.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 
 class ButtonFormatWidget extends StatelessWidget {

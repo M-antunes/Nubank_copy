@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
+import 'package:nubank_copy/Modules/home/home_page.dart';
+import 'package:nubank_copy/Modules/settings_page/settings_page.dart';
+
 class AppbarButtonWidget extends StatelessWidget {
   final IconData icon;
   final Color color;
   final Color buttonColor;
   final bool hasShape;
+  final bool hasCloseButton;
 
   const AppbarButtonWidget({
     Key? key,
@@ -12,6 +16,7 @@ class AppbarButtonWidget extends StatelessWidget {
     required this.color,
     required this.buttonColor,
     this.hasShape = true,
+    this.hasCloseButton = false,
   }) : super(key: key);
 
   @override
@@ -27,7 +32,23 @@ class AppbarButtonWidget extends StatelessWidget {
           iconSize: 28,
           icon: Icon(icon),
           color: color,
-          onPressed: () {},
+          onPressed: () {
+            if (hasCloseButton == false) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SettingsPage(),
+                ),
+              );
+            } else {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HomePage(),
+                ),
+              );
+            }
+          },
         ),
       );
     } else {
@@ -36,7 +57,14 @@ class AppbarButtonWidget extends StatelessWidget {
         iconSize: 34,
         icon: Icon(icon),
         color: color,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => HomePage(),
+            ),
+          );
+        },
       );
     }
   }
