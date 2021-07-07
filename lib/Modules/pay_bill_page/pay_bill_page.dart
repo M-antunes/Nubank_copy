@@ -8,49 +8,54 @@ class PayBillPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.only(right: 10, left: 10),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Align(
-              alignment: Alignment.topLeft,
-              child: AppbarButtonWidget(
-                hasShape: false,
-                hasCloseButton: true,
-                icon: Icons.close,
-                color: AppColors.description,
-                buttonColor: AppColors.navigationBarButton,
+    return SafeArea(
+      child: Scaffold(
+        appBar: PreferredSize(
+          child: Align(
+            alignment: Alignment.topLeft,
+            child: AppbarButtonWidget(
+              hasShape: false,
+              hasCloseButton: true,
+              icon: Icons.close,
+              color: AppColors.description,
+              buttonColor: AppColors.navigationBarButton,
+            ),
+          ),
+          preferredSize: Size.fromHeight(90),
+        ),
+        body: Padding(
+          padding: EdgeInsets.only(right: 10, left: 10),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              PayBillPageWidget(
+                icon: Icons.api_outlined,
+                upperText: "Pagar com Pix",
+                lowerText: "Leia um QR Code ou cole o código",
               ),
-            ),
-            PayBillPageWidget(
-              icon: Icons.api_outlined,
-              upperText: "Pagar com Pix",
-              lowerText: "Leia um QR Code ou cole o código",
-            ),
-            Divider(
-              height: 1,
-              thickness: 1,
-              color: AppColors.description,
-            ),
-            PayBillPageWidget(
-              icon: Icons.settings_cell_sharp,
-              upperText: "Pagar fatura do cartão",
-              lowerText: "Libere o limite do seu cartão de crédito",
-            ),
-            Divider(
-              height: 1,
-              thickness: 1,
-              color: AppColors.description,
-            ),
-            PayBillPageWidget(
-              icon: Icons.qr_code_2_sharp,
-              upperText: "Pagar um boleto",
-              lowerText: "Contas de luz, água, etc",
-            ),
-          ],
+              Divider(
+                height: 1,
+                thickness: 1,
+                color: AppColors.description,
+              ),
+              PayBillPageWidget(
+                icon: Icons.settings_cell_sharp,
+                upperText: "Pagar fatura do cartão",
+                lowerText: "Libere o limite do seu cartão de crédito",
+              ),
+              Divider(
+                height: 1,
+                thickness: 1,
+                color: AppColors.description,
+              ),
+              PayBillPageWidget(
+                icon: Icons.qr_code_2_sharp,
+                upperText: "Pagar um boleto",
+                lowerText: "Contas de luz, água, etc",
+              ),
+            ],
+          ),
         ),
       ),
     );

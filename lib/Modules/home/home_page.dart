@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_copy/Modules/deposit_page/deposit_page.dart';
+import 'package:nubank_copy/Modules/indicate_friends_page/indicate_friends_page.dart';
 import 'package:nubank_copy/Modules/navigation_bar_pages/pix_area_page/pix_area_page.dart';
 import 'package:nubank_copy/Modules/pay_bill_page/pay_bill_page.dart';
+import 'package:nubank_copy/Modules/transfer_page/transfer_page.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 import 'package:nubank_copy/shared/widgets/appbar_button_widget/appbar_button_widget.dart';
@@ -104,17 +107,17 @@ class HomePage extends StatelessWidget {
                 upperText: "Pagar",
               ),
               NavigationBarWidget(
-                navigationPage: PixAreaPage(),
+                navigationPage: IndicateFriendsPage(),
                 icon: Icons.perm_contact_cal_outlined,
                 upperText: "Indicar\namigos",
               ),
               NavigationBarWidget(
-                navigationPage: PixAreaPage(),
+                navigationPage: TransferPage(),
                 icon: Icons.arrow_circle_up_outlined,
                 upperText: "Transferir",
               ),
               NavigationBarWidget(
-                navigationPage: PixAreaPage(),
+                navigationPage: DepositPage(),
                 icon: Icons.arrow_circle_down_outlined,
                 upperText: "Depositar",
               ),

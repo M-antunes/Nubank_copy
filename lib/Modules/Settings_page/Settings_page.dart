@@ -102,7 +102,7 @@ class SettingsPage extends StatelessWidget {
                     text: "Sobre",
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 20, bottom: 10),
+                    padding: EdgeInsets.only(top: 20, bottom: 10),
                     child: Container(
                       child: OutlinedButton(
                         onPressed: () {},
@@ -115,8 +115,8 @@ class SettingsPage extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(10.0))),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 80, vertical: 4),
+                          padding:
+                              EdgeInsets.symmetric(horizontal: 80, vertical: 4),
                           child: Text(
                             "Sair do App",
                             style: TextStyles.settingsLeaveApp,
