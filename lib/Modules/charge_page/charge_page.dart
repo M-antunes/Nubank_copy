@@ -43,7 +43,12 @@ class ChargePage extends StatelessWidget {
                 height: 30,
               ),
               TextFormField(
-                initialValue: "R\$ 0,00",
+                cursorHeight: 35,
+                cursorColor: AppColors.description,
+                decoration: InputDecoration(
+                  hintText: "R\$ 0,00",
+                  hintStyle: TextStyles.pixPage,
+                ),
                 style: TextStyles.pixPage,
               ),
               SizedBox(height: 30),

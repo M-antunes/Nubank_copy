@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_copy/Modules/navigation_bar_pages/pix_area_page/pix_area_page.dart';
+import 'package:nubank_copy/Modules/help_me_page/help_me_page.dart';
+import 'package:nubank_copy/Modules/pix_area_page/pix_area_page.dart';
 import 'package:nubank_copy/Modules/thank_you_page/thank_you_page.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
@@ -37,13 +38,23 @@ class VirtualCard extends StatelessWidget {
                       ),
                     );
                   },
-                  child: AppbarButtonWidget(
-                    hasCloseButton: true,
-                    hasShape: false,
-                    hasQrCode: true,
-                    icon: Icons.contact_support_outlined,
-                    color: AppColors.greyLetter,
-                    buttonColor: AppColors.secondary,
+                  child: MaterialButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => HelpMePage(),
+                        ),
+                      );
+                    },
+                    child: AppbarButtonWidget(
+                      hasCloseButton: true,
+                      hasShape: false,
+                      hasQrCode: true,
+                      icon: Icons.contact_support_outlined,
+                      color: AppColors.greyLetter,
+                      buttonColor: AppColors.secondary,
+                    ),
                   ),
                 ),
               ],

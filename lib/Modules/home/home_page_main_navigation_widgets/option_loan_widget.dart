@@ -3,8 +3,7 @@ import 'package:nubank_copy/Modules/simulate_loan/simulate_loan.dart';
 
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
-
-import '../button_format_widget/button_format_widget.dart';
+import 'package:nubank_copy/shared/widgets/button_format_widget/button_format_widget.dart';
 
 class OptionLoanWidget extends StatelessWidget {
   const OptionLoanWidget({

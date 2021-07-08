@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'package:nubank_copy/Modules/home/home_page.dart';
-import 'package:nubank_copy/Modules/navigation_bar_pages/pix_area_page/pix_area_page.dart';
+import 'package:nubank_copy/Modules/pix_area_page/pix_area_page.dart';
 import 'package:nubank_copy/Modules/settings_page/settings_page.dart';
 
 class AppbarButtonWidget extends StatelessWidget {
@@ -26,51 +25,49 @@ class AppbarButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     if (hasShape == true) {
       return MaterialButton(
-        padding: EdgeInsets.all(5),
+        padding: EdgeInsets.all(15),
         color: buttonColor,
         shape: CircleBorder(),
-        onPressed: () {},
-        child: IconButton(
-          splashRadius: 1,
-          iconSize: 28,
-          icon: Icon(icon),
+        onPressed: () {
+          if (hasCloseButton == false) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => SettingsPage(),
+              ),
+            );
+          } else {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => HomePage(),
+              ),
+            );
+          }
+        },
+        child: Icon(
+          icon,
           color: color,
-          onPressed: () {
-            if (hasCloseButton == false) {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => SettingsPage(),
-                ),
-              );
-            } else {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => HomePage(),
-                ),
-              );
-            }
-          },
+          size: 28,
         ),
       );
-    } else {
-      return IconButton(
-        splashRadius: 1,
-        iconSize: 34,
-        icon: Icon(icon),
-        color: color,
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: hasQrCode == false
-                  ? (context) => HomePage()
-                  : (context) => PixAreaPage(),
-            ),
-          );
-        },
-      );
     }
+
+    return IconButton(
+      splashRadius: 1,
+      iconSize: 34,
+      icon: Icon(icon),
+      color: color,
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: hasQrCode == false
+                ? (context) => HomePage()
+                : (context) => PixAreaPage(),
+          ),
+        );
+      },
+    );
   }
 }

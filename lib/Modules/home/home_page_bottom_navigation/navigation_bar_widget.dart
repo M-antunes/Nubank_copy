@@ -46,9 +46,9 @@ class NavigationBarWidget extends StatelessWidget {
                   size: 30,
                   color: Colors.grey[300],
                 ),
-                Padding(
-                  padding: EdgeInsets.only(bottom: 10),
-                  child: Expanded(
+                Expanded(
+                  child: Padding(
+                    padding: EdgeInsets.only(bottom: 10),
                     child: Align(
                       alignment: Alignment.bottomLeft,
                       child: Text(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_copy/Modules/pay_bill_page/pay_bill_page_widget/pay_bill_page_widget.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/widgets/appbar_button_widget/appbar_button_widget.dart';
-import 'package:nubank_copy/shared/widgets/pay_bill_page_widget/pay_bill_page_widget.dart';
 
 class PayBillPage extends StatelessWidget {
   const PayBillPage({Key? key}) : super(key: key);

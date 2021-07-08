@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_copy/Modules/ajust_limit/ajust_limit.dart';
+import 'package:nubank_copy/Modules/ajust_limit/ajust_limit_page.dart';
 import 'package:nubank_copy/Modules/charge_page/charge_page.dart';
 import 'package:nubank_copy/Modules/deposit_page/deposit_page.dart';
-import 'package:nubank_copy/Modules/donate/donate.dart';
+import 'package:nubank_copy/Modules/donate/donate_page.dart';
 import 'package:nubank_copy/Modules/help_me_page/help_me_page.dart';
+import 'package:nubank_copy/Modules/home/home_page_bottom_navigation/navigation_bar_widget.dart';
+import 'package:nubank_copy/Modules/home/home_page_main_navigation_widgets/option_balance_widget.dart';
+import 'package:nubank_copy/Modules/home/home_page_main_navigation_widgets/option_card_widget.dart';
+import 'package:nubank_copy/Modules/home/home_page_main_navigation_widgets/option_google_pay_widget.dart';
+import 'package:nubank_copy/Modules/home/home_page_main_navigation_widgets/option_life_insurance_widget.dart';
+import 'package:nubank_copy/Modules/home/home_page_main_navigation_widgets/option_loan_widget.dart';
+import 'package:nubank_copy/Modules/home/home_page_main_navigation_widgets/option_wpp_payment_widget.dart';
 import 'package:nubank_copy/Modules/indicate_friends_page/indicate_friends_page.dart';
-import 'package:nubank_copy/Modules/navigation_bar_pages/pix_area_page/pix_area_page.dart';
+import 'package:nubank_copy/Modules/pix_area_page/pix_area_page.dart';
 import 'package:nubank_copy/Modules/pay_bill_page/pay_bill_page.dart';
 import 'package:nubank_copy/Modules/phone_credit/phone_credit.dart';
 import 'package:nubank_copy/Modules/simulate_loan/simulate_loan.dart';
@@ -14,13 +21,6 @@ import 'package:nubank_copy/Modules/virtual_card/virtual_card.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 import 'package:nubank_copy/shared/widgets/appbar_button_widget/appbar_button_widget.dart';
-import 'package:nubank_copy/shared/widgets/home_options_widgets/navigation_bar_widget/navigation_bar_widget.dart';
-import 'package:nubank_copy/shared/widgets/home_options_widgets/option_balance_widget.dart';
-import 'package:nubank_copy/shared/widgets/home_options_widgets/option_card_widget.dart';
-import 'package:nubank_copy/shared/widgets/home_options_widgets/option_google_pay_widget.dart';
-import 'package:nubank_copy/shared/widgets/home_options_widgets/option_life_insurance_widget.dart';
-import 'package:nubank_copy/shared/widgets/home_options_widgets/option_loan_widget.dart';
-import 'package:nubank_copy/shared/widgets/home_options_widgets/option_wpp_payment_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -85,6 +85,7 @@ class HomePage extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
         child: Column(
           children: [
             OptionCardWidget(),
@@ -101,6 +102,7 @@ class HomePage extends StatelessWidget {
         child: Container(
           height: size.height * 0.151,
           child: ListView(
+            physics: BouncingScrollPhysics(),
             scrollDirection: Axis.horizontal,
             children: [
               NavigationBarWidget(

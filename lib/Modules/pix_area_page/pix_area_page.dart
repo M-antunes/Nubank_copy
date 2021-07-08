@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_copy/Modules/pix_area_page/pix_page_widgets/pix_page_bottom_options_widget.dart';
+import 'package:nubank_copy/Modules/pix_area_page/pix_page_widgets/pix_page_icon_row_widget.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 import 'package:nubank_copy/shared/widgets/appbar_button_widget/appbar_button_widget.dart';
-import 'package:nubank_copy/shared/widgets/pix_page_widgets/pix_page_bottom_options_widget.dart';
-import 'package:nubank_copy/shared/widgets/pix_page_widgets/pix_page_icon_row_widget.dart';
 
 class PixAreaPage extends StatefulWidget {
   const PixAreaPage({Key? key}) : super(key: key);

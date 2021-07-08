@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_copy/Modules/pix_area_page/pix_page_widgets/pix_page_icon_row_widget.dart';
 import 'package:nubank_copy/Modules/thank_you_page/thank_you_page.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 import 'package:nubank_copy/shared/widgets/appbar_button_widget/appbar_button_widget.dart';
-import 'package:nubank_copy/shared/widgets/pix_page_widgets/pix_page_icon_row_widget.dart';
 
 class AjustLimit extends StatelessWidget {
   const AjustLimit({Key? key}) : super(key: key);
@@ -54,9 +54,13 @@ class AjustLimit extends StatelessWidget {
             Container(
               width: 160,
               child: TextFormField(
-                textAlign: TextAlign.center,
-                initialValue: "R\$ 1.000,00",
-                style: TextStyles.balanceNumber,
+                cursorHeight: 35,
+                cursorColor: AppColors.description,
+                decoration: InputDecoration(
+                  hintText: "R\$ 1.000,00",
+                  hintStyle: TextStyles.pixPage,
+                ),
+                style: TextStyles.pixPage,
               ),
             ),
             SizedBox(height: 20),

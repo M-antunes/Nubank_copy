@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_copy/Modules/help_me_page/help_me_page_widget.dart';
+import 'package:nubank_copy/Modules/thank_you_page/thank_you_page.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 import 'package:nubank_copy/shared/widgets/appbar_button_widget/appbar_button_widget.dart';
@@ -153,37 +154,47 @@ class HelpMePage extends StatelessWidget {
             ),
           ),
         ),
-        bottomNavigationBar: Container(
-          height: 90,
-          child: Column(
-            children: [
-              Divider(
-                height: 0.5,
-                thickness: 0.5,
-                color: AppColors.greyLetter,
+        bottomNavigationBar: MaterialButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ThankYouPage(),
               ),
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-                child: Container(
-                  height: 45,
-                  width: 360,
-                  decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      borderRadius: BorderRadius.circular(40)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.chat_outlined,
-                          size: 30, color: AppColors.description),
-                      SizedBox(width: 15),
-                      Text("Converse com a gente",
-                          style: TextStyles.desriptionTextBold),
-                    ],
+            );
+          },
+          child: Container(
+            height: 90,
+            child: Column(
+              children: [
+                Divider(
+                  height: 0.5,
+                  thickness: 0.5,
+                  color: AppColors.greyLetter,
+                ),
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                  child: Container(
+                    height: 45,
+                    width: 360,
+                    decoration: BoxDecoration(
+                        color: Colors.grey[200],
+                        borderRadius: BorderRadius.circular(40)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.chat_outlined,
+                            size: 30, color: AppColors.description),
+                        SizedBox(width: 15),
+                        Text("Converse com a gente",
+                            style: TextStyles.desriptionTextBold),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
