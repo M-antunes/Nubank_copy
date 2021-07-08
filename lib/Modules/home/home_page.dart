@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_copy/Modules/ajust_limit/ajust_limit.dart';
+import 'package:nubank_copy/Modules/charge_page/charge_page.dart';
 import 'package:nubank_copy/Modules/deposit_page/deposit_page.dart';
+import 'package:nubank_copy/Modules/donate/donate.dart';
+import 'package:nubank_copy/Modules/help_me_page/help_me_page.dart';
 import 'package:nubank_copy/Modules/indicate_friends_page/indicate_friends_page.dart';
 import 'package:nubank_copy/Modules/navigation_bar_pages/pix_area_page/pix_area_page.dart';
 import 'package:nubank_copy/Modules/pay_bill_page/pay_bill_page.dart';
+import 'package:nubank_copy/Modules/phone_credit/phone_credit.dart';
+import 'package:nubank_copy/Modules/simulate_loan/simulate_loan.dart';
 import 'package:nubank_copy/Modules/transfer_page/transfer_page.dart';
+import 'package:nubank_copy/Modules/virtual_card/virtual_card.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 import 'package:nubank_copy/shared/widgets/appbar_button_widget/appbar_button_widget.dart';
@@ -122,22 +129,22 @@ class HomePage extends StatelessWidget {
                 upperText: "Depositar",
               ),
               NavigationBarWidget(
-                navigationPage: PixAreaPage(),
+                navigationPage: SimulateLoan(),
                 icon: Icons.local_atm_outlined,
                 upperText: "Empréstimos",
               ),
               NavigationBarWidget(
-                navigationPage: PixAreaPage(),
+                navigationPage: VirtualCard(),
                 icon: Icons.settings_cell_sharp,
                 upperText: "Cartão\nvirtual",
               ),
               NavigationBarWidget(
-                navigationPage: PixAreaPage(),
+                navigationPage: PhoneCredit(),
                 icon: Icons.phone_android_sharp,
                 upperText: "Recarga de\ncelular",
               ),
               NavigationBarWidget(
-                navigationPage: PixAreaPage(),
+                navigationPage: AjustLimit(),
                 icon: Icons.account_tree_outlined,
                 upperText: "Ajustar\nlimite",
               ),
@@ -147,17 +154,17 @@ class HomePage extends StatelessWidget {
                 upperText: "Bloquear\ncartão",
               ),
               NavigationBarWidget(
-                navigationPage: PixAreaPage(),
+                navigationPage: ChargePage(),
                 icon: Icons.arrow_circle_down_outlined,
                 upperText: "Cobrar",
               ),
               NavigationBarWidget(
-                navigationPage: PixAreaPage(),
+                navigationPage: DonatePage(),
                 icon: Icons.local_activity_outlined,
                 upperText: "Doação",
               ),
               NavigationBarWidget(
-                navigationPage: PixAreaPage(),
+                navigationPage: HelpMePage(),
                 icon: Icons.contact_support_outlined,
                 upperText: "Me\najuda",
               ),

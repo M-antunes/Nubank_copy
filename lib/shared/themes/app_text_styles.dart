@@ -94,4 +94,19 @@ class TextStyles {
     fontWeight: FontWeight.w300,
     color: AppColors.greyLetter,
   );
+  static final greyDescriptionBold = GoogleFonts.roboto(
+    fontSize: 17,
+    fontWeight: FontWeight.w600,
+    color: AppColors.greyLetter,
+  );
+  static final balanceNumberGrey = GoogleFonts.roboto(
+    fontSize: 24,
+    fontWeight: FontWeight.w600,
+    color: AppColors.greyLetter,
+  );
+  static final purpleSubtext = GoogleFonts.roboto(
+    fontSize: 20,
+    fontWeight: FontWeight.w600,
+    color: AppColors.primary,
+  );
 }

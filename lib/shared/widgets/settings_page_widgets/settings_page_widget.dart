@@ -7,6 +7,7 @@ class SettingsPageWidget extends StatelessWidget {
   final IconData infoIcon;
   final String text;
   final bool hasDivider;
+
   const SettingsPageWidget({
     Key? key,
     required this.infoIcon,
@@ -20,7 +21,7 @@ class SettingsPageWidget extends StatelessWidget {
       children: [
         dividerCheck(),
         Padding(
-          padding: const EdgeInsets.only(top: 20, right: 30, left: 40),
+          padding: EdgeInsets.only(top: 20, right: 30, left: 40),
           child: Row(
             children: [
               Icon(
@@ -39,7 +40,7 @@ class SettingsPageWidget extends StatelessWidget {
               Icon(
                 Icons.arrow_forward_ios_sharp,
                 color: AppColors.secondary,
-              ),
+              )
             ],
           ),
         ),
@@ -50,7 +51,7 @@ class SettingsPageWidget extends StatelessWidget {
             thickness: 1,
             color: AppColors.secondary,
           ),
-        )
+        ),
       ],
     );
   }

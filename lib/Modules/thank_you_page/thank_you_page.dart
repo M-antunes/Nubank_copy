@@ -24,11 +24,17 @@ class _ThankYouPageState extends State<ThankYouPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              thankYouAnimation("Thank you for testing\nmy Nubank Copy", 2),
-              SizedBox(
-                height: 50,
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  thankYouAnimation("Obrigado por testar\nmeu Nubank Copy", 2),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  thankYouAnimation(
+                      "Thank you for testing \nmy Nubank Copy", 6),
+                ],
               ),
-              thankYouAnimation("Obrigado por testar\nmeu Nubank Copy", 6),
               SizedBox(height: 150),
               TweenAnimationBuilder(
                 child: ButtonFormatWidget(

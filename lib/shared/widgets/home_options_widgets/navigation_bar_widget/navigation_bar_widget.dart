@@ -31,7 +31,7 @@ class NavigationBarWidget extends StatelessWidget {
           decoration: BoxDecoration(
             color: AppColors.navigationBarButton,
             borderRadius: BorderRadius.all(
-              Radius.circular(8),
+              Radius.circular(4),
             ),
           ),
           width: 95,
@@ -44,7 +44,7 @@ class NavigationBarWidget extends StatelessWidget {
                 Icon(
                   icon,
                   size: 30,
-                  color: Colors.grey[50],
+                  color: Colors.grey[300],
                 ),
                 Padding(
                   padding: EdgeInsets.only(bottom: 10),

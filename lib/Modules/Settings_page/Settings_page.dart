@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_copy/Modules/home/home_page.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 import 'package:nubank_copy/shared/widgets/appbar_button_widget/appbar_button_widget.dart';
+import 'package:nubank_copy/shared/widgets/purple_wide_button_widget/purple_wide_button_widget.dart';
 import 'package:nubank_copy/shared/widgets/settings_page_widgets/settings_page_widget.dart';
 
 class SettingsPage extends StatelessWidget {
@@ -101,29 +103,11 @@ class SettingsPage extends StatelessWidget {
                     infoIcon: Icons.contact_support_outlined,
                     text: "Sobre",
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(top: 20, bottom: 10),
-                    child: Container(
-                      child: OutlinedButton(
-                        onPressed: () {},
-                        style: ButtonStyle(
-                          side: MaterialStateProperty.all(BorderSide(
-                              style: BorderStyle.solid,
-                              color: Color(0xffffffff))),
-                          shape: MaterialStateProperty.all(
-                              RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10.0))),
-                        ),
-                        child: Padding(
-                          padding:
-                              EdgeInsets.symmetric(horizontal: 80, vertical: 4),
-                          child: Text(
-                            "Sair do App",
-                            style: TextStyles.settingsLeaveApp,
-                          ),
-                        ),
-                      ),
-                    ),
+                  PurpleWideButtonWidget(
+                    borderColor: AppColors.secondary,
+                    textColor: TextStyles.settingsLeaveApp,
+                    text: "Sair do App",
+                    route: HomePage(),
                   )
                 ],
               ),

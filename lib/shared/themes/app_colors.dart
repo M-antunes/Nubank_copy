@@ -8,5 +8,5 @@ class AppColors {
   static final description = Colors.black;
   static final navigationBarButton = Colors.purple[500]!;
   static final bottomIcon = Colors.grey[100]!;
-  static final greyLetter = Colors.grey[600];
+  static final greyLetter = Colors.grey;
 }

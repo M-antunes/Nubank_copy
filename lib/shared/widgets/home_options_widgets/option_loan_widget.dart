@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_copy/Modules/simulate_loan/simulate_loan.dart';
 
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
@@ -53,6 +54,7 @@ class OptionLoanWidget extends StatelessWidget {
               style: TextStyles.desriptionTextBold,
             ),
             ButtonFormatWidget(
+              route: SimulateLoan(),
               testText: "Simular Empréstimo",
             )
           ],

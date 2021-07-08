@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
+
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 
 class PixPageIconRowWidget extends StatelessWidget {
   final IconData icon;
   final String text;
+  final Widget? route;
+  final bool hasPageToGo;
 
   const PixPageIconRowWidget({
     Key? key,
     required this.icon,
     required this.text,
+    this.route,
+    this.hasPageToGo = false,
   }) : super(key: key);
 
   @override
@@ -29,7 +34,16 @@ class PixPageIconRowWidget extends StatelessWidget {
                 iconSize: 30,
                 icon: Icon(icon),
                 color: Colors.black87,
-                onPressed: () {},
+                onPressed: () {
+                  if (hasPageToGo == true) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => route!,
+                      ),
+                    );
+                  }
+                },
               ),
             ),
           ),
