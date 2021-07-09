@@ -9,6 +9,18 @@ class TextStyles {
     fontWeight: FontWeight.w300,
     color: AppColors.primary,
   );
+  static final mFont = GoogleFonts.ptSerif(
+    fontSize: 32,
+    fontWeight: FontWeight.w500,
+    fontStyle: FontStyle.italic,
+    color: AppColors.secondary,
+  );
+  static final antunesFont = GoogleFonts.marmelad(
+    fontSize: 22,
+    fontWeight: FontWeight.w300,
+    fontStyle: FontStyle.italic,
+    color: AppColors.secondary,
+  );
   static final gereeting = GoogleFonts.roboto(
     fontSize: 28,
     fontWeight: FontWeight.w400,
