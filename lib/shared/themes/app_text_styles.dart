@@ -4,6 +4,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 
 class TextStyles {
+  static final splashPageText = GoogleFonts.ubuntu(
+    fontSize: 26,
+    fontWeight: FontWeight.w300,
+    color: AppColors.primary,
+  );
   static final gereeting = GoogleFonts.roboto(
     fontSize: 28,
     fontWeight: FontWeight.w400,
