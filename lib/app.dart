@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Nubank Copy',
       theme: ThemeData(),
-      home: SlpashPage(),
+      home: CreditCardBillPage(),
     );
   }
 }

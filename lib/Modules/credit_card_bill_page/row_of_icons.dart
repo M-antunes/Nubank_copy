@@ -21,7 +21,7 @@ class RowOfIcons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(12.0),
+      padding: EdgeInsets.all(6),
       child: Column(
         children: [
           Padding(
