@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_copy/Modules/ajust_limit/ajust_limit_page.dart';
 import 'package:nubank_copy/Modules/charge_page/charge_page.dart';
+import 'package:nubank_copy/Modules/credit_card_bill_page/credit_card_bill_page.dart';
 import 'package:nubank_copy/Modules/deposit_page/deposit_page.dart';
 import 'package:nubank_copy/Modules/donate/donate_page.dart';
 import 'package:nubank_copy/Modules/help_me_page/help_me_page.dart';
@@ -98,7 +99,7 @@ class HomePage extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 8),
+        padding: EdgeInsets.symmetric(horizontal: 14.0, vertical: 8),
         child: Container(
           height: size.height * 0.151,
           child: ListView(

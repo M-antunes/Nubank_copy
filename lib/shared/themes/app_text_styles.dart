@@ -107,12 +107,12 @@ class TextStyles {
     color: AppColors.description,
   );
   static final greyDescription = GoogleFonts.roboto(
-    fontSize: 17,
+    fontSize: 18,
     fontWeight: FontWeight.w300,
     color: AppColors.greyLetter,
   );
   static final greyDescriptionBold = GoogleFonts.roboto(
-    fontSize: 17,
+    fontSize: 18,
     fontWeight: FontWeight.w600,
     color: AppColors.greyLetter,
   );
