@@ -2,15 +2,30 @@ import 'package:delayed_display/delayed_display.dart';
 import 'package:flutter/material.dart';
 import 'package:nubank_copy/Modules/home/home_page.dart';
 import 'package:nubank_copy/Modules/splash_page/nubank_animation_controller/nubank_animation_controller.dart';
-import 'package:nubank_copy/shared/widgets/navigation_controller/navigation_controller.dart';
 
-class NuIconPage extends StatelessWidget {
+class NuIconPage extends StatefulWidget {
   const NuIconPage({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    goToPage(context, HomePage(), 5500);
+  _NuIconPageState createState() => _NuIconPageState();
+}
 
+class _NuIconPageState extends State<NuIconPage> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration(milliseconds: 4500), () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => HomePage(),
+        ),
+      );
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.white,
@@ -24,8 +39,8 @@ class NuIconPage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  CloseChild(onTop: true),
-                  CloseChild(onTop: false),
+                  NuAmination(onTop: true),
+                  NuAmination(onTop: false),
                   DelayedDisplay(
                     delay: Duration(milliseconds: 2700),
                     child: TweenAnimationBuilder(

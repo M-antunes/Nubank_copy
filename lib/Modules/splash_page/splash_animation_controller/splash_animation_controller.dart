@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 
-class NuAmination extends StatelessWidget {
-  final bool onTop;
+class SplashAnimation extends StatelessWidget {
+  final bool rightSide;
 
-  const NuAmination({
+  const SplashAnimation({
     Key? key,
-    this.onTop = true,
+    this.rightSide = true,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
 
-    if (onTop) {
+    if (rightSide == true) {
       return TweenAnimationBuilder(
           tween: Tween<double>(begin: 0, end: 1),
           duration: Duration(milliseconds: 1500),
@@ -21,26 +21,30 @@ class NuAmination extends StatelessWidget {
             return Opacity(
               opacity: _val,
               child: Padding(
-                padding: EdgeInsets.only(top: _val * size.height / 2.7),
+                padding: EdgeInsets.only(right: _val * size.width / 3.23),
                 child: Align(
-                    alignment: Alignment.topCenter,
-                    child:
-                        Image.asset('lib/assets/images/nu.png', height: 100)),
+                    alignment: Alignment.centerRight,
+                    child: Text(".antunes.dev", style: TextStyles.antunesFont)),
               ),
             );
           });
     } else {
       return TweenAnimationBuilder(
           tween: Tween<double>(begin: 0, end: 1),
-          duration: Duration(milliseconds: 1500),
+          duration: Duration(milliseconds: 1300),
           builder: (BuildContext content, double _val, Widget? child) {
             return Opacity(
               opacity: _val,
               child: Padding(
-                padding: EdgeInsets.only(bottom: _val * size.height / 2.7),
+                padding:
+                    EdgeInsets.only(bottom: 8, left: _val * size.width / 3.23),
                 child: Align(
-                    alignment: Alignment.bottomCenter,
-                    child: Text("Bank", style: TextStyles.splashPageText)),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    "m",
+                    style: TextStyles.mFont,
+                  ),
+                ),
               ),
             );
           });
