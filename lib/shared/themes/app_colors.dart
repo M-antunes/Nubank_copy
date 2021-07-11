@@ -9,4 +9,8 @@ class AppColors {
   static final navigationBarButton = Colors.purple[500]!;
   static final bottomIcon = Colors.grey[100]!;
   static final greyLetter = Colors.grey;
+  static final lightGreen = Colors.green[100]!;
+  static final darkGreen = Colors.green[700]!;
+  static final lightRed = Colors.red[100]!;
+  static final darkRed = Colors.red[700]!;
 }

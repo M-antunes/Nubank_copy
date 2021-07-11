@@ -16,7 +16,7 @@ class DescribeText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(5.0),
+      padding: EdgeInsets.all(5.0),
       child: Align(
         alignment: Alignment.centerLeft,
         child: Text.rich(
@@ -47,7 +47,7 @@ class DescribeText2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(5.0),
+      padding: EdgeInsets.all(5.0),
       child: Column(children: [
         Align(
             alignment: Alignment.centerLeft,

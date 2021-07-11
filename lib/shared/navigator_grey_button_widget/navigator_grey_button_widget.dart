@@ -14,7 +14,7 @@ class NavigatorGreyButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconButton(
       splashRadius: 1,
-      iconSize: 34,
+      iconSize: 30,
       icon: Icon(icon),
       color: AppColors.greyLetter,
       onPressed: () {

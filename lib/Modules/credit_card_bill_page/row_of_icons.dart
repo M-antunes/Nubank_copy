@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_copy/shared/themes/app_colors.dart';
 
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 
@@ -7,7 +8,6 @@ class RowOfIcons extends StatelessWidget {
   final String text;
   final String? text2;
   final Widget? route;
-  final bool hasPageToGo;
 
   const RowOfIcons({
     Key? key,
@@ -15,7 +15,6 @@ class RowOfIcons extends StatelessWidget {
     required this.text,
     this.text2,
     this.route,
-    this.hasPageToGo = false,
   }) : super(key: key);
 
   @override
@@ -27,27 +26,18 @@ class RowOfIcons extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(bottom: 20),
             child: MaterialButton(
-              padding: EdgeInsets.all(6),
-              color: Colors.grey[200],
-              shape: CircleBorder(),
-              onPressed: () {},
-              child: IconButton(
-                splashRadius: 1,
-                iconSize: 30,
-                icon: Icon(icon),
-                color: Colors.black87,
+                padding: EdgeInsets.all(20),
+                color: Colors.grey[200],
+                shape: CircleBorder(),
                 onPressed: () {
-                  if (hasPageToGo == true) {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => route!,
-                      ),
-                    );
-                  }
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => route!,
+                    ),
+                  );
                 },
-              ),
-            ),
+                child: Icon(icon, color: AppColors.description, size: 30)),
           ),
           Text(
             text,
