@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_copy/Modules/charge_page/charge_page.dart';
+import 'package:nubank_copy/Modules/pay_bill_page/pay_bill_page.dart';
 import 'package:nubank_copy/Modules/pix_area_page/pix_page_widgets/pix_page_bottom_options_widget.dart';
 import 'package:nubank_copy/Modules/pix_area_page/pix_page_widgets/pix_page_icon_row_widget.dart';
+import 'package:nubank_copy/Modules/transfer_page/transfer_page.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 import 'package:nubank_copy/shared/widgets/appbar_button_widget/appbar_button_widget.dart';
@@ -54,16 +57,18 @@ class _PixAreaPageState extends State<PixAreaPage> {
               Row(
                 children: [
                   PixPageIconRowWidget(
-                    icon: Icons.api_outlined,
-                    text: "Pagar",
-                  ),
+                      icon: Icons.api_outlined,
+                      text: "Pagar",
+                      route: PayBillPage()),
                   PixPageIconRowWidget(
                     icon: Icons.arrow_circle_up_outlined,
                     text: "Transferir",
+                    route: TransferPage(),
                   ),
                   PixPageIconRowWidget(
                     icon: Icons.arrow_circle_down_outlined,
                     text: "Cobrar",
+                    route: ChargePage(),
                   ),
                 ],
               ),

@@ -101,7 +101,6 @@ class AjustLimit extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               PixPageIconRowWidget(
-                hasPageToGo: true,
                 route: ThankYouPage(),
                 icon: Icons.add,
                 text: "   Pedir\naumento",

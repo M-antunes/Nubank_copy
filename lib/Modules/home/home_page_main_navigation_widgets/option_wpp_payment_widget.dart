@@ -18,7 +18,7 @@ class OptionWppPaymentWidget extends StatelessWidget {
           Radius.circular(4),
         ),
       ),
-      margin: EdgeInsets.only(top: 23, left: 23, right: 23),
+      margin: EdgeInsets.only(top: 8, left: 23, right: 23, bottom: 8),
       child: Padding(
         padding: EdgeInsets.all(12.0),
         child: Column(

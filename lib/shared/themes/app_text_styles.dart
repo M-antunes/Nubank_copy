@@ -131,4 +131,9 @@ class TextStyles {
     fontWeight: FontWeight.w600,
     color: AppColors.primary,
   );
+  static final bigNumber = GoogleFonts.roboto(
+    fontSize: 38,
+    fontWeight: FontWeight.w600,
+    color: AppColors.description,
+  );
 }

@@ -330,6 +330,8 @@ class _CreditCardBillPageState extends State<CreditCardBillPage> {
     );
   }
 
+  //  -------------FUNÇÕES ------------------
+
   callDividerOnly() {
     return Column(
       children: [
@@ -360,21 +362,4 @@ class _CreditCardBillPageState extends State<CreditCardBillPage> {
       ],
     );
   }
-
-  // callGreyLine() {
-  //   return Divider(height: 1, thickness: 0.2, color: AppColors.greyLetter);
-  // }
-
-  // callDateIndicator(String date) {
-  //   return Align(
-  //     alignment: Alignment.centerLeft,
-  //     child: Padding(
-  //       padding: EdgeInsets.only(left: 15),
-  //       child: Text(
-  //         date,
-  //         style: TextStyles.greyDescriptionBold,
-  //       ),
-  //     ),
-  //   );
-  // }
 }

@@ -6,14 +6,14 @@ import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 class RowOfIcons extends StatelessWidget {
   final IconData icon;
   final String text;
-  final String? text2;
+  final String text2;
   final Widget? route;
 
   const RowOfIcons({
     Key? key,
     required this.icon,
     required this.text,
-    this.text2,
+    required this.text2,
     this.route,
   }) : super(key: key);
 
@@ -44,7 +44,7 @@ class RowOfIcons extends StatelessWidget {
             style: TextStyles.desriptionTextBold,
           ),
           Text(
-            text2!,
+            text2,
             style: TextStyles.desriptionTextBold,
           ),
         ],

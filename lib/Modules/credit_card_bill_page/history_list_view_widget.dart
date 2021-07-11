@@ -62,6 +62,8 @@ class HistoryListWidget extends StatelessWidget {
     );
   }
 
+//  -------------FUNÇÕES ------------------
+
   addPaymentDescription(String purchaseValue, String parcels) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,

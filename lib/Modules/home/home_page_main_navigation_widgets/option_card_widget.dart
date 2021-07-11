@@ -22,9 +22,9 @@ class OptionCardWidget extends StatelessWidget {
               Radius.circular(4),
             ),
           ),
-          margin: const EdgeInsets.only(top: 8, left: 8, right: 8),
+          margin: EdgeInsets.only(top: 8, left: 8, right: 8, bottom: 8),
           child: Padding(
-            padding: const EdgeInsets.all(12.0),
+            padding: EdgeInsets.all(12.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,

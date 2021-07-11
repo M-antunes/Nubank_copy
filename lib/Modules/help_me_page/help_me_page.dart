@@ -68,8 +68,9 @@ class HelpMePage extends StatelessWidget {
             ),
             preferredSize: Size.fromHeight(130)),
         body: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
           child: Padding(
-            padding: const EdgeInsets.only(left: 15),
+            padding: EdgeInsets.only(left: 15),
             child: Column(
               children: [
                 HelpMePageWidget(
