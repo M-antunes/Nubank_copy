@@ -7,6 +7,7 @@ import 'package:nubank_copy/Modules/donate/donate_page.dart';
 import 'package:nubank_copy/Modules/help_me_page/help_me_page.dart';
 import 'package:nubank_copy/Modules/home/home_page_bottom_navigation/navigation_bar_widget.dart';
 import 'package:nubank_copy/Modules/home/home_page_main_navigation_widgets/option_balance_widget.dart';
+import 'package:nubank_copy/Modules/home/home_page_main_navigation_widgets/block_card/option_block_card_widget.dart';
 import 'package:nubank_copy/Modules/home/home_page_main_navigation_widgets/option_card_widget.dart';
 import 'package:nubank_copy/Modules/home/home_page_main_navigation_widgets/option_google_pay_widget.dart';
 import 'package:nubank_copy/Modules/home/home_page_main_navigation_widgets/option_life_insurance_widget.dart';
@@ -22,10 +23,16 @@ import 'package:nubank_copy/Modules/virtual_card/virtual_card.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 import 'package:nubank_copy/shared/widgets/appbar_button_widget/appbar_button_widget.dart';
+import 'package:nubank_copy/Modules/home/home_page_main_navigation_widgets/block_card/block_card_message.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -151,8 +158,7 @@ class HomePage extends StatelessWidget {
                 icon: Icons.account_tree_outlined,
                 upperText: "Ajustar\nlimite",
               ),
-              NavigationBarWidget(
-                navigationPage: PixAreaPage(),
+              OptionBlockCardWidget(
                 icon: Icons.no_cell_sharp,
                 upperText: "Bloquear\ncartão",
               ),

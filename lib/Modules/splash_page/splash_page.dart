@@ -4,14 +4,14 @@ import 'package:nubank_copy/Modules/splash_page/nu_icon_page.dart';
 import 'package:nubank_copy/Modules/splash_page/splash_animation_controller/splash_animation_controller.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 
-class SlpashPage extends StatefulWidget {
-  const SlpashPage({Key? key}) : super(key: key);
+class SplashPage extends StatefulWidget {
+  const SplashPage({Key? key}) : super(key: key);
 
   @override
-  _SlpashPageState createState() => _SlpashPageState();
+  _SplashPageState createState() => _SplashPageState();
 }
 
-class _SlpashPageState extends State<SlpashPage> {
+class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();

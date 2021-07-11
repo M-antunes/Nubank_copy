@@ -121,6 +121,11 @@ class TextStyles {
     fontWeight: FontWeight.w600,
     color: AppColors.greyLetter,
   );
+  static final balanceNumberPurple = GoogleFonts.roboto(
+    fontSize: 24,
+    fontWeight: FontWeight.w600,
+    color: AppColors.primary,
+  );
   static final purpleSubtext = GoogleFonts.roboto(
     fontSize: 20,
     fontWeight: FontWeight.w600,

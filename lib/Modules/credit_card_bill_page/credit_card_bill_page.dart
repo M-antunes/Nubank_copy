@@ -7,6 +7,7 @@ import 'package:nubank_copy/Modules/credit_card_bill_page/history_list_view_widg
 import 'package:nubank_copy/Modules/credit_card_bill_page/row_of_icons.dart';
 import 'package:nubank_copy/Modules/help_me_page/help_me_page.dart';
 import 'package:nubank_copy/Modules/home/home_page.dart';
+import 'package:nubank_copy/Modules/home/home_page_main_navigation_widgets/block_card/block_card_icon_row.dart';
 import 'package:nubank_copy/Modules/indicate_friends_page/indicate_friends_page.dart';
 import 'package:nubank_copy/Modules/pay_bill_page/pay_bill_page.dart';
 import 'package:nubank_copy/Modules/thank_you_page/thank_you_page.dart';
@@ -225,10 +226,11 @@ class _CreditCardBillPageState extends State<CreditCardBillPage> {
                     icon: Icons.settings_cell_sharp,
                     route: VirtualCard(),
                   ),
-                  RowOfIcons(
-                      text: "Bloquear",
-                      text2: "cartão",
-                      icon: Icons.lock_outline),
+                  BlockCardIconRow(
+                    text: "Bloquear",
+                    text2: "cartão",
+                    icon: Icons.lock_outline,
+                  ),
                   RowOfIcons(
                       text: "Indicar",
                       text2: "Amigos",
@@ -295,9 +297,20 @@ class _CreditCardBillPageState extends State<CreditCardBillPage> {
               buttonColor: AppColors.bottomIcon,
               icon: Icons.food_bank_outlined,
               iconColor: AppColors.description,
-              text: "Bar Barril 8000",
+              text: "Barril 8000",
               text2: "23:21",
               parcels: "R\$ 136,50",
+              purchaseValue: "",
+            ),
+            callDividerOnly(),
+            HistoryListWidget(
+              hasPurchase: true,
+              buttonColor: AppColors.bottomIcon,
+              icon: Icons.food_bank_outlined,
+              iconColor: AppColors.description,
+              text: "Outback",
+              text2: "13:12",
+              parcels: "R\$ 94,60",
               purchaseValue: "",
             ),
             callDividerAndDate("24 Mai"),
