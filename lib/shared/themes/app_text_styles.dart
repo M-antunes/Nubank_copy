@@ -137,13 +137,18 @@ class TextStyles {
     color: AppColors.description,
   );
   static final mediumSizedNumber = GoogleFonts.roboto(
-    fontSize: 30,
+    fontSize: 23,
     fontWeight: FontWeight.w500,
     color: AppColors.description,
   );
   static final bigDesriptionText = GoogleFonts.roboto(
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: FontWeight.w400,
     color: AppColors.description,
+  );
+  static final bigWhiteDescription = GoogleFonts.roboto(
+    fontSize: 32,
+    fontWeight: FontWeight.w500,
+    color: AppColors.secondary,
   );
 }

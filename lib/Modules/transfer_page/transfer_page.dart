@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_copy/Modules/pix_area_page/pix_area_page.dart';
+import 'package:nubank_copy/Modules/thank_you_page/thank_you_page.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 import 'package:nubank_copy/shared/widgets/appbar_button_widget/appbar_button_widget.dart';
-import 'package:nubank_copy/shared/widgets/thank_you_button_widget/thank_you_button_widget.dart';
+import 'package:nubank_copy/shared/widgets/arrow_purple_button/arrow_purple_button_widget.dart';
 
 class TransferPage extends StatelessWidget {
   const TransferPage({Key? key}) : super(key: key);
@@ -87,7 +88,7 @@ class TransferPage extends StatelessWidget {
             ],
           ),
         ),
-        bottomNavigationBar: ThankYouButtonWidget(),
+        bottomNavigationBar: ArrowButtonWidget(),
       ),
     );
   }

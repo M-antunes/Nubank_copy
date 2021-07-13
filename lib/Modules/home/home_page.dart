@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
                             style: TextStyles.gereeting,
                             children: [
                               TextSpan(
-                                text: "Marcelo",
+                                text: "Usuário",
                                 style: TextStyles.userName,
                               )
                             ],

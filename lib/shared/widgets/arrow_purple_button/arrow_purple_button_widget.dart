@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:nubank_copy/Modules/thank_you_page/thank_you_page.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 
-class ThankYouButtonWidget extends StatelessWidget {
-  const ThankYouButtonWidget({Key? key}) : super(key: key);
+class ArrowButtonWidget extends StatelessWidget {
+  const ArrowButtonWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

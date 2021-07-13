@@ -213,7 +213,10 @@ class _CreditCardBillPageState extends State<CreditCardBillPage> {
                     route: PayBillPage(),
                   ),
                   RowOfIcons(
-                      text: " Resumo de", text2: "fatura", icon: Icons.list),
+                      text: " Resumo de",
+                      text2: "fatura",
+                      icon: Icons.list,
+                      route: ThankYouPage()),
                   RowOfIcons(
                     text: "Ajustar limite",
                     text2: "",

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_copy/Modules/thank_you_page/thank_you_page.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 import 'package:nubank_copy/shared/widgets/appbar_button_widget/appbar_button_widget.dart';
-import 'package:nubank_copy/shared/widgets/thank_you_button_widget/thank_you_button_widget.dart';
+import 'package:nubank_copy/shared/widgets/arrow_purple_button/arrow_purple_button_widget.dart';
 
 class PhoneCredit extends StatelessWidget {
   const PhoneCredit({Key? key}) : super(key: key);
@@ -62,7 +63,7 @@ class PhoneCredit extends StatelessWidget {
             ],
           ),
         ),
-        bottomNavigationBar: ThankYouButtonWidget(),
+        bottomNavigationBar: ArrowButtonWidget(),
       ),
     );
   }

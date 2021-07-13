@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_copy/Modules/help_me_page/help_me_page.dart';
 import 'package:nubank_copy/Modules/home/home_page.dart';
 import 'package:nubank_copy/Modules/life_insurance_page/nubank_life_options_widget.dart';
 import 'package:nubank_copy/Modules/thank_you_page/thank_you_page.dart';
@@ -57,7 +58,7 @@ class NubankLifePage extends StatelessWidget {
                               color: Colors.black45),
                           child: NavigatorGreyButtonWidget(
                             icon: Icons.contact_support_outlined,
-                            navigator: HomePage(),
+                            navigator: HelpMePage(),
                             hasWhiteColor: true,
                           ),
                         ),
@@ -115,13 +116,13 @@ class NubankLifePage extends StatelessWidget {
                   "Preço médio inicial de R\$ 9 por mês, sem tarifas escondidas e sem ajustes de preço por idade durante 5 anos. Simples assim..",
             ),
             NubankLifeOptionsWidget(
-              icon: Icons.edit,
+              icon: Icons.mode_edit_outline_outlined,
               text: "Coberturas personalizáveis e úteis para você",
               text2:
                   "Monte um seguro com coberturas que fazem a diferença para você e para o seu momento de vida.",
             ),
             NubankLifeOptionsWidget(
-              icon: Icons.headphones,
+              icon: Icons.headphones_outlined,
               text: "Se você precisar, estaremos aqui",
               text2:
                   "Facilidade para acionar o seguro pelo aplicativo ou telefone, com um time 100% dedicado a realmente te dar suporte se você precisar.",
@@ -142,11 +143,10 @@ class NubankLifePage extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: MaterialButton(
-          onPressed: () {
-            goToPage(context, ThankYouPage());
-          },
-          child: PurpleBottomButtonWidget(text: "Simular meu seguro")),
+      bottomNavigationBar: PurpleBottomButtonWidget(
+        text: "Simular meu seguro",
+        navigator: ThankYouPage(),
+      ),
     );
   }
 

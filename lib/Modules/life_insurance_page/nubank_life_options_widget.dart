@@ -35,12 +35,12 @@ class NubankLifeOptionsWidget extends StatelessWidget {
               color: Colors.grey[700],
             ),
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 13),
           Text(
             text,
             style: TextStyles.mediumSizedNumber,
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 14),
           Text(
             text2,
             style: TextStyles.bigDesriptionText,

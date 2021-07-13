@@ -1,3 +1,4 @@
+import 'package:delayed_display/delayed_display.dart';
 import 'package:flutter/material.dart';
 import 'package:nubank_copy/Modules/home/home_page.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
@@ -36,21 +37,24 @@ class _ThankYouPageState extends State<ThankYouPage> {
                 ],
               ),
               SizedBox(height: 150),
-              TweenAnimationBuilder(
-                child: ButtonFormatWidget(
-                  testText: "Voltar para HomePage",
-                  thankButton: true,
-                  route: HomePage(),
+              DelayedDisplay(
+                delay: Duration(seconds: 2),
+                child: TweenAnimationBuilder(
+                  child: ButtonFormatWidget(
+                    testText: "Voltar para HomePage",
+                    thankButton: true,
+                    route: HomePage(),
+                  ),
+                  duration: Duration(seconds: 3),
+                  curve: Curves.easeIn,
+                  tween: Tween<double>(begin: 0, end: 1),
+                  builder: (BuildContext context, double _var, Widget? child) {
+                    return Opacity(
+                      opacity: _var,
+                      child: child,
+                    );
+                  },
                 ),
-                duration: Duration(seconds: 6),
-                curve: Curves.easeIn,
-                tween: Tween<double>(begin: 0, end: 1),
-                builder: (BuildContext context, double _var, Widget? child) {
-                  return Opacity(
-                    opacity: _var,
-                    child: child,
-                  );
-                },
               ),
             ],
           ),

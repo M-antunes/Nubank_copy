@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_copy/Modules/whatsapp_register_page/whatsapp_register_page.dart';
 
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
@@ -56,6 +57,7 @@ class OptionWppPaymentWidget extends StatelessWidget {
             ),
             ButtonFormatWidget(
               testText: "Quero Conhecer",
+              route: WhatsAppRegisterPage(),
             )
           ],
         ),
