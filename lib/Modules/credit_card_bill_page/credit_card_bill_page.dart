@@ -12,9 +12,9 @@ import 'package:nubank_copy/Modules/indicate_friends_page/indicate_friends_page.
 import 'package:nubank_copy/Modules/pay_bill_page/pay_bill_page.dart';
 import 'package:nubank_copy/Modules/thank_you_page/thank_you_page.dart';
 import 'package:nubank_copy/Modules/virtual_card/virtual_card.dart';
-import 'package:nubank_copy/shared/navigator_grey_button_widget/navigator_grey_button_widget.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
+import 'package:nubank_copy/shared/widgets/navigator_grey_button_widget/navigator_grey_button_widget.dart';
 
 class CreditCardBillPage extends StatefulWidget {
   const CreditCardBillPage({Key? key}) : super(key: key);

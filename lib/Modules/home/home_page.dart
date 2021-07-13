@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_copy/Modules/ajust_limit/ajust_limit_page.dart';
 import 'package:nubank_copy/Modules/charge_page/charge_page.dart';
-import 'package:nubank_copy/Modules/credit_card_bill_page/credit_card_bill_page.dart';
 import 'package:nubank_copy/Modules/deposit_page/deposit_page.dart';
 import 'package:nubank_copy/Modules/donate/donate_page.dart';
 import 'package:nubank_copy/Modules/help_me_page/help_me_page.dart';
@@ -23,7 +22,6 @@ import 'package:nubank_copy/Modules/virtual_card/virtual_card.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 import 'package:nubank_copy/shared/widgets/appbar_button_widget/appbar_button_widget.dart';
-import 'package:nubank_copy/Modules/home/home_page_main_navigation_widgets/block_card/block_card_message.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -43,7 +41,7 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 70),
+              padding: EdgeInsets.only(top: 70),
               child: Row(
                 children: [
                   Expanded(
@@ -65,7 +63,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(right: 15),
+                    padding: EdgeInsets.only(right: 15),
                     child: Row(
                       children: [
                         SizedBox(

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_copy/Modules/help_me_page/help_me_page.dart';
 import 'package:nubank_copy/Modules/pix_area_page/pix_area_page.dart';
 import 'package:nubank_copy/Modules/thank_you_page/thank_you_page.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 import 'package:nubank_copy/shared/widgets/appbar_button_widget/appbar_button_widget.dart';
 import 'package:nubank_copy/shared/widgets/button_format_widget/button_format_widget.dart';
+import 'package:nubank_copy/shared/widgets/navigator_grey_button_widget/navigator_grey_button_widget.dart';
 
 class SimulateLoan extends StatelessWidget {
   const SimulateLoan({Key? key}) : super(key: key);
@@ -25,24 +27,9 @@ class SimulateLoan extends StatelessWidget {
                   color: AppColors.greyLetter,
                   buttonColor: AppColors.secondary,
                 ),
-                MaterialButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => PixAreaPage(),
-                      ),
-                    );
-                  },
-                  child: AppbarButtonWidget(
-                    hasCloseButton: true,
-                    hasShape: false,
-                    hasQrCode: true,
+                NavigatorGreyButtonWidget(
                     icon: Icons.contact_support_outlined,
-                    color: AppColors.greyLetter,
-                    buttonColor: AppColors.secondary,
-                  ),
-                ),
+                    navigator: HelpMePage())
               ],
             ),
             preferredSize: Size.fromHeight(90)),

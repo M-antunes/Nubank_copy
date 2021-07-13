@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_copy/Modules/charge_page/charge_page.dart';
 import 'package:nubank_copy/Modules/check_balance_page/balance_list_view_widget.dart';
 import 'package:nubank_copy/Modules/check_balance_page/show_description_widget.dart';
 import 'package:nubank_copy/Modules/credit_card_bill_page/row_of_icons.dart';
+import 'package:nubank_copy/Modules/deposit_page/deposit_page.dart';
 import 'package:nubank_copy/Modules/help_me_page/help_me_page.dart';
 import 'package:nubank_copy/Modules/home/home_page.dart';
+import 'package:nubank_copy/Modules/pay_bill_page/pay_bill_page.dart';
 import 'package:nubank_copy/Modules/simulate_loan/simulate_loan.dart';
 import 'package:nubank_copy/Modules/thank_you_page/thank_you_page.dart';
-import 'package:nubank_copy/shared/navigator_grey_button_widget/navigator_grey_button_widget.dart';
+import 'package:nubank_copy/Modules/transfer_page/transfer_page.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
+import 'package:nubank_copy/shared/widgets/navigator_grey_button_widget/navigator_grey_button_widget.dart';
 
 class CheckBalancePage extends StatefulWidget {
   const CheckBalancePage({Key? key}) : super(key: key);
@@ -91,21 +95,28 @@ class _CheckBalancePageState extends State<CheckBalancePage> {
                   RowOfIcons(
                       icon: Icons.arrow_circle_down_outlined,
                       text: "Depositar",
-                      text2: ""),
+                      text2: "",
+                      route: DepositPage()),
                   RowOfIcons(
-                      icon: Icons.qr_code_2_sharp, text: "Pagar", text2: ""),
+                      icon: Icons.qr_code_2_sharp,
+                      text: "Pagar",
+                      text2: "",
+                      route: PayBillPage()),
                   RowOfIcons(
                       icon: Icons.arrow_circle_up_outlined,
                       text: "Transferir",
-                      text2: ""),
+                      text2: "",
+                      route: TransferPage()),
                   RowOfIcons(
                       icon: Icons.local_atm_outlined,
                       text: "Empréstimo",
-                      text2: ""),
+                      text2: "",
+                      route: SimulateLoan()),
                   RowOfIcons(
                       icon: Icons.arrow_circle_down_outlined,
                       text: "Cobrar",
-                      text2: ""),
+                      text2: "",
+                      route: ChargePage()),
                 ],
               ),
             ),

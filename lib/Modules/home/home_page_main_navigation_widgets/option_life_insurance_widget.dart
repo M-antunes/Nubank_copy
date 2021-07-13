@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_copy/Modules/life_insurance_page/nubank_life_page.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 import 'package:nubank_copy/shared/widgets/button_format_widget/button_format_widget.dart';
@@ -47,6 +48,7 @@ class OptionLifeInsuranceWidget extends StatelessWidget {
               ),
             ),
             ButtonFormatWidget(
+              route: NubankLifePage(),
               testText: "Conhecer",
             )
           ],

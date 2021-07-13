@@ -5,6 +5,7 @@ import 'package:nubank_copy/Modules/thank_you_page/thank_you_page.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 import 'package:nubank_copy/shared/widgets/appbar_button_widget/appbar_button_widget.dart';
+import 'package:nubank_copy/shared/widgets/navigator_grey_button_widget/navigator_grey_button_widget.dart';
 
 class VirtualCard extends StatelessWidget {
   const VirtualCard({Key? key}) : super(key: key);
@@ -29,34 +30,9 @@ class VirtualCard extends StatelessWidget {
                   "CARTÃO VIRTUAL",
                   style: TextStyles.greyDescriptionBold,
                 ),
-                MaterialButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => PixAreaPage(),
-                      ),
-                    );
-                  },
-                  child: MaterialButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => HelpMePage(),
-                        ),
-                      );
-                    },
-                    child: AppbarButtonWidget(
-                      hasCloseButton: true,
-                      hasShape: false,
-                      hasQrCode: true,
-                      icon: Icons.contact_support_outlined,
-                      color: AppColors.greyLetter,
-                      buttonColor: AppColors.secondary,
-                    ),
-                  ),
-                ),
+                NavigatorGreyButtonWidget(
+                    icon: Icons.contact_support_outlined,
+                    navigator: HelpMePage())
               ],
             ),
             preferredSize: Size.fromHeight(90)),
