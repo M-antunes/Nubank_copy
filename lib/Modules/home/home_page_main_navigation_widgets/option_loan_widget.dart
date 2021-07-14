@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_copy/Modules/simulate_loan/simulate_loan.dart';
 
+import 'package:nubank_copy/Modules/simulate_loan/simulate_loan.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 import 'package:nubank_copy/shared/widgets/button_format_widget/button_format_widget.dart';
 
 class OptionLoanWidget extends StatelessWidget {
+  final Widget availableLoan;
   const OptionLoanWidget({
     Key? key,
+    required this.availableLoan,
   }) : super(key: key);
 
   @override
@@ -48,10 +50,7 @@ class OptionLoanWidget extends StatelessWidget {
                 style: TextStyles.desriptionText,
               ),
             ),
-            Text(
-              "RS 25.000,00",
-              style: TextStyles.desriptionTextBold,
-            ),
+            availableLoan,
             ButtonFormatWidget(
               route: SimulateLoan(),
               testText: "Simular Empréstimo",

@@ -31,6 +31,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  bool _isShown = true;
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -68,10 +70,20 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         SizedBox(
                           width: 70,
-                          child: AppbarButtonWidget(
-                            icon: Icons.remove_red_eye_outlined,
-                            color: AppColors.secondary,
-                            buttonColor: AppColors.navigationBarButton,
+                          child: MaterialButton(
+                            padding: EdgeInsets.all(15),
+                            color: AppColors.navigationBarButton,
+                            shape: CircleBorder(),
+                            child: _isShown
+                                ? Icon(Icons.remove_red_eye_outlined,
+                                    size: 28, color: AppColors.secondary)
+                                : Icon(Icons.horizontal_rule,
+                                    size: 28, color: AppColors.secondary),
+                            onPressed: () {
+                              setState(() {
+                                _isShown = !_isShown;
+                              });
+                            },
                           ),
                         ),
                         SizedBox(
@@ -94,9 +106,22 @@ class _HomePageState extends State<HomePage> {
         physics: BouncingScrollPhysics(),
         child: Column(
           children: [
-            OptionCardWidget(),
-            OptionBalanceWidget(),
-            OptionLoanWidget(),
+            OptionCardWidget(
+                currentDebt: _isShown
+                    ? Text("R\$ 700,00", style: TextStyles.creditBillNumber)
+                    : hideContent(),
+                availableLimit: _isShown
+                    ? Text("R\$ 1.500,00",
+                        style: TextStyles.creditAvailableLimit)
+                    : hideContent()),
+            OptionBalanceWidget(
+                balance: _isShown
+                    ? Text("RS 12.000,00", style: TextStyles.balanceNumber)
+                    : hideContent()),
+            OptionLoanWidget(
+                availableLoan: _isShown
+                    ? Text("RS 25.000,00", style: TextStyles.desriptionTextBold)
+                    : hideContent()),
             OptionLifeInsuranceWidget(),
             OptionWppPaymentWidget(),
             OptionGooglePayWidget()
@@ -180,5 +205,12 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
     );
+  }
+
+  hideContent() {
+    return Container(
+        height: 25,
+        width: 250,
+        decoration: BoxDecoration(color: Colors.grey[300]));
   }
 }

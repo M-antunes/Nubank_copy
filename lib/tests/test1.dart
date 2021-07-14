@@ -2,57 +2,47 @@ import 'package:flutter/material.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 
-class RaiseButton extends StatefulWidget {
-  const RaiseButton({Key? key}) : super(key: key);
+class ButtonTest extends StatefulWidget {
+  const ButtonTest({Key? key}) : super(key: key);
 
   @override
-  _RaiseButtonState createState() => _RaiseButtonState();
+  _ButtonTestState createState() => _ButtonTestState();
 }
 
-class _RaiseButtonState extends State<RaiseButton> {
+class _ButtonTestState extends State<ButtonTest> {
+  bool _isShown = true;
+
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return Scaffold(
-      body: Align(
-        alignment: Alignment.center,
-        child: MaterialButton(
-            child: Text(
-              "Open Popup",
-              style: TextStyles.balanceNumber,
+      backgroundColor: AppColors.secondary,
+      body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        Container(
+          alignment: Alignment.center,
+          child: Center(
+              child: Visibility(
+            visible: _isShown,
+            child: Text("Hello", style: TextStyles.bigNumber),
+          )),
+        ),
+        SizedBox(height: 150),
+        MaterialButton(
+          onPressed: () {
+            setState(() {
+              _isShown = !_isShown;
+            });
+          },
+          child: Container(
+            decoration: BoxDecoration(
+                color: AppColors.greyLetter,
+                borderRadius: BorderRadius.circular(10)),
+            child: Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text("Press", style: TextStyles.bigNumber),
             ),
-            onPressed: () {
-              showDialog(
-                context: context,
-                builder: (BuildContext context) {
-                  return Align(
-                    alignment: Alignment.bottomCenter,
-                    child: Container(
-                      color: Colors.white,
-                      height: size.height / 4,
-                      width: size.width,
-                      child: Column(children: [
-                        Icon(Icons.ac_unit_outlined),
-                        Text(
-                          "Você quer bloquear temporariamente\n seu cartão?",
-                          style: TextStyles.creditBillText,
-                        ),
-                        Divider(thickness: 0.2, color: AppColors.greyLetter),
-                        Row(children: [
-                          Text("Cancelar", style: TextStyles.creditBillText),
-                          VerticalDivider(
-                              thickness: 1,
-                              width: 1,
-                              color: AppColors.greyLetter),
-                          Text("Bloquear", style: TextStyles.creditBillText)
-                        ]),
-                      ]),
-                    ),
-                  );
-                },
-              );
-            }),
-      ),
+          ),
+        ),
+      ]),
     );
   }
 }

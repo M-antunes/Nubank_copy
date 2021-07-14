@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_copy/Modules/home/home_page.dart';
 import 'package:nubank_copy/Modules/splash_page/splash_page.dart';
+import 'package:nubank_copy/tests/test1.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -8,7 +10,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Nubank Copy',
       theme: ThemeData(),
-      home: SplashPage(),
+      home: HomePage(),
     );
   }
 }

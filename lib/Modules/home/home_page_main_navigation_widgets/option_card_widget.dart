@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_copy/Modules/credit_card_bill_page/credit_card_bill_page.dart';
 
+import 'package:nubank_copy/Modules/credit_card_bill_page/credit_card_bill_page.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 
 class OptionCardWidget extends StatelessWidget {
+  final Widget currentDebt;
+  final Widget availableLimit;
   const OptionCardWidget({
-    final Key? key,
+    Key? key,
+    required this.currentDebt,
+    required this.availableLimit,
   }) : super(key: key);
 
   @override
@@ -32,11 +36,11 @@ class OptionCardWidget extends StatelessWidget {
                 Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(8.0),
                       child: Icon(Icons.credit_card),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(8.0),
                       child: Text(
                         "Cartão de Crédito",
                         style: TextStyles.creditBillText,
@@ -45,27 +49,24 @@ class OptionCardWidget extends StatelessWidget {
                   ],
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(5.0),
+                  padding: EdgeInsets.all(5.0),
                   child: Text(
                     "Fatura atual",
                     style: TextStyles.desriptionText,
                   ),
                 ),
+                Padding(padding: EdgeInsets.all(5.0), child: currentDebt),
                 Padding(
-                  padding: const EdgeInsets.all(5.0),
+                  padding: EdgeInsets.only(left: 5),
                   child: Text(
-                    "RS 700,00",
-                    style: TextStyles.creditBillNumber,
+                    "Limite disponível para compras",
+                    style: TextStyles.desriptionText,
                   ),
                 ),
-                Text(
-                  "Limite disponível para compras",
-                  style: TextStyles.desriptionText,
-                ),
-                Text(
-                  "RS 1.500,00",
-                  style: TextStyles.creditAvailableLimit,
-                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 2, left: 5),
+                  child: availableLimit,
+                )
               ],
             ),
           ),

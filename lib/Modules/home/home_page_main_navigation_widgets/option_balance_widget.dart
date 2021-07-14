@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+
 import 'package:nubank_copy/Modules/check_balance_page/check_balance_page.dart';
 import 'package:nubank_copy/shared/themes/app_colors.dart';
 import 'package:nubank_copy/shared/themes/app_text_styles.dart';
 
 class OptionBalanceWidget extends StatelessWidget {
+  final Widget balance;
   const OptionBalanceWidget({
     Key? key,
+    required this.balance,
   }) : super(key: key);
 
   @override
@@ -26,9 +29,9 @@ class OptionBalanceWidget extends StatelessWidget {
             Radius.circular(4),
           ),
         ),
-        margin: const EdgeInsets.only(top: 8, left: 8, right: 8, bottom: 8),
+        margin: EdgeInsets.only(top: 8, left: 8, right: 8, bottom: 8),
         child: Padding(
-          padding: const EdgeInsets.all(12.0),
+          padding: EdgeInsets.all(12.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -36,11 +39,11 @@ class OptionBalanceWidget extends StatelessWidget {
               Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.all(8.0),
                     child: Icon(Icons.account_balance_outlined),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.all(8.0),
                     child: Text(
                       "Conta",
                       style: TextStyles.creditBillText,
@@ -49,19 +52,13 @@ class OptionBalanceWidget extends StatelessWidget {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.all(5.0),
+                padding: EdgeInsets.all(5.0),
                 child: Text(
                   "Saldo disponível",
                   style: TextStyles.desriptionText,
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(5.0),
-                child: Text(
-                  "RS 12.000,00",
-                  style: TextStyles.balanceNumber,
-                ),
-              ),
+              Padding(padding: EdgeInsets.all(5.0), child: balance),
             ],
           ),
         ),
