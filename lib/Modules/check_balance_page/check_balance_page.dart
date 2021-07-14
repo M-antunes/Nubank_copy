@@ -144,7 +144,7 @@ class _CheckBalancePageState extends State<CheckBalancePage> {
                     Padding(
                       padding: EdgeInsets.all(18.0),
                       child: Icon(
-                        Icons.ac_unit_outlined,
+                        Icons.local_atm_outlined,
                         size: 30,
                         color: AppColors.description,
                       ),

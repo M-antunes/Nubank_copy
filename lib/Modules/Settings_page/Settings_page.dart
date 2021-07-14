@@ -30,7 +30,7 @@ class SettingsPage extends StatelessWidget {
                             style: TextStyles.gereeting,
                             children: [
                               TextSpan(
-                                text: "Marcelo",
+                                text: "Usuário",
                                 style: TextStyles.userName,
                               )
                             ],
