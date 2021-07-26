@@ -1,6 +1,6 @@
 # Nubank_copy
 
-### I have dedicated some of my free time in the course of a couple of weeks on this project to show how easy it is to clone the layout of a major bank app. I've only used Flutter to do this. I must tell you, visitor, that this is is only a copy of the layout. None of the features of the bank were done in here.
+### I have dedicated some of my free time in the course of a couple of weeks on this project to show how easy it is to clone the layout of a major bank app. I've only used Flutter to do this. I must tell you, visitor, that this is only a copy of the layout. None of the features of the bank were developed in here.
 
 ##### PS: While looking at these pages and gifs, keep in mind that when I made this project, Nubank hand't changed its layout yet. Try to remember how it used to be. Thanks. 
 
